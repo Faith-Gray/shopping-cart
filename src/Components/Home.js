@@ -4,6 +4,6 @@ function Home() {
             This is the Home Page
       </div>
     );
-  }
+}
   
-  export default Home;
+export default Home;

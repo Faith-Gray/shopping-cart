@@ -11,6 +11,11 @@ function App() {
   return (
     <div className="App">
       <nav className='navigationBar'>
+        <div className='nav_logoContainer'>
+          <div className='nav_logo'></div>
+          <div className='nav_title'>DogRun</div>
+        </div>
+
         <ul>
           <li>
             <Link to="/">Home</Link>

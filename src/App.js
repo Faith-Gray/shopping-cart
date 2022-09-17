@@ -6,13 +6,20 @@ import Wear from './Components/Wear';
 import Walk from './Components/Walk';
 import Chains from './Components/Chains';
 import Reviews from './Components/Reviews';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 function App() {
   return (
     <div className="App">
-      <nav className='navigationBar'>
+      <nav className='navBar'>
         <div className='nav_logoContainer'>
-          <div className='nav_logo'></div>
+          <div className='nav_logo'>
+            <FontAwesomeIcon icon={faPaw} />
+          </div>
           <div className='nav_title'>DogRun</div>
         </div>
 
@@ -36,6 +43,12 @@ function App() {
             <Link to="/reviews">Reviews</Link>
           </li>
         </ul>
+        <div className='nav_search'>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
+        <div className='nav_logo'>
+          <FontAwesomeIcon icon={faCartShopping} />
+        </div>
       </nav>
 
 

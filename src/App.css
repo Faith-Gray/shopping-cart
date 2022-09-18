@@ -1,15 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+:root {
+	--mainColor: #29335c;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
 }
 
 ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .navBar {
     display: flex;
     flex-direction: row;
+    background-color: green;
+    height: 85px;
+    text-align: center;
+    align-items: center;
+	padding: 0 2rem;
 }
 
+.nav_logoContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+
+}
+
+.nav_search {
+    margin-left: auto;
+    margin-right: 1em;
+    font-size: 22px;
+}
+
+.nav_cart {
+    font-size: 22px;
+
+}

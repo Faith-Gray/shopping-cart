@@ -1,21 +1,23 @@
-import { Link, Route, Routes } from 'react-router-dom';
+// import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Components/Home';
-import Shop from './Components/Shop';
-import Wear from './Components/Wear';
-import Walk from './Components/Walk';
-import Chains from './Components/Chains';
-import Reviews from './Components/Reviews';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+// import Home from './NavBarComponents/Home';
+// import Shop from './NavBarComponents/Shop';
+// import Wear from './NavBarComponents/Wear';
+// import Walk from './NavBarComponents/Walk';
+// import Chains from './NavBarComponents/Chains';
+// import Reviews from './NavBarComponents/Reviews';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPaw } from '@fortawesome/free-solid-svg-icons';
+// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+// import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import NavBar from './Components/NavBar';
 
 
 function App() {
   return (
     <div className="App">
-      <nav className='navBar'>
+      <NavBar />
+      {/* <nav className='navBar'>
         <div className='nav_logoContainer'>
           <div className='nav_logo'>
             <FontAwesomeIcon icon={faPaw} />
@@ -49,17 +51,17 @@ function App() {
         <div className='nav_logo'>
           <FontAwesomeIcon icon={faCartShopping} />
         </div>
-      </nav>
+      </nav> */}
 
 
-      <Routes>
+      {/* <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/wear" element={<Wear />} />
       <Route path="/walk" element={<Walk />} />
       <Route path="/chains" element={<Chains />} />
       <Route path="/reviews" element={<Reviews />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

@@ -23,6 +23,20 @@ ul {
     
 }
 
+ul > li {
+    padding-left: 40px;
+    font-size: 14px;
+    padding-top: 16px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 .navBar {
     display: flex;
     flex-direction: row;

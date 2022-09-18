@@ -15,7 +15,7 @@ function NavBar() {
           <div className='nav_title'>DogRun</div>
         </div>
 
-        <ul>
+        <ul className='navBarUL'>
           <li>
             <Link to="/">HOME</Link>
           </li>

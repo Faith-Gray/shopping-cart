@@ -1,12 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Components/NavBarComponents/Home';
-import Shop from './Components/NavBarComponents/Shop';
-import Wear from './Components/NavBarComponents/Wear';
-import Walk from './Components/NavBarComponents/Walk';
-import Chains from './Components/NavBarComponents/Chains';
-import Reviews from './Components/NavBarComponents/Reviews';
-
+import Home from './Components/Home';
+import Shop from './Components/Shop';
+import Wear from './Components/Wear';
+import Walk from './Components/Walk';
+import Chains from './Components/Chains';
+import Reviews from './Components/Reviews';
 import NavBar from './Components/NavBar';
 
 

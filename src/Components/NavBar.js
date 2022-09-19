@@ -25,7 +25,7 @@ function NavBar() {
           <div className='nav_logo'>
             <FontAwesomeIcon icon={faPaw} rotation={270} />
           </div>
-          <div className='nav_title'>DogRun</div>
+          <Link to="/" className='nav_title'>DogRun</Link>
         </div>
 
         <ul className='navBarUL'>

@@ -9,6 +9,10 @@
     
 }
 
+body {
+    background-color: edf5e1 ;
+}
+
 :root {
 	--mainColor: #29335c;
 	--mainColorLight: #5767aa;
@@ -16,21 +20,25 @@
 	--textColor: #eee;
 }
 
-ul {
+/* navbar */
+
+.navBarUL {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     
 }
 
-ul > li {
-    padding-left: 40px;
+.navBarUL > li {
+    margin-left: 40px;
     font-size: 14px;
     padding-top: 16px;
 }
 
 a:visited {
     text-decoration: none;
+    color: #05386b;
+
 }
 
 a:link {
@@ -40,11 +48,36 @@ a:link {
 .navBar {
     display: flex;
     flex-direction: row;
-    background-color: green;
+    background-color: #edf5e1;
     height: 85px;
     text-align: center;
     align-items: center;
 	padding: 0 2rem;
+    color: #05386b;
+}
+
+.navBarUL > li {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.navBarUL > li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navBarUL > li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .nav_logoContainer {
@@ -67,4 +100,19 @@ a:link {
 .nav_cart {
     font-size: 22px;
 
+}
+
+.nav-dropdown-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: none;
+
+}
+
+/* home */
+
+.greenDog {
+    width: 100%;
+    height: auto;
 }

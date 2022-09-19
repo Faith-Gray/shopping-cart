@@ -3,11 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+
+const handleNavBar = console.log('click');
 
 function NavBar() {
     return (
       
       <nav className='navBar'>
+        <button
+					className="nav-dropdown-btn"
+
+					onClick={handleNavBar}>
+
+          <FontAwesomeIcon icon={faBars} />
+				</button>
+
+
         <div className='nav_logoContainer'>
           <div className='nav_logo'>
             <FontAwesomeIcon icon={faPaw} />
@@ -35,12 +48,15 @@ function NavBar() {
             <Link to="/reviews">REVEIWS</Link>
           </li>
         </ul>
+
+        
         <div className='nav_search'>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </div>
         <div className='nav_cart'>
           <FontAwesomeIcon icon={faCartShopping} />
         </div>
+        
       </nav>
   
   

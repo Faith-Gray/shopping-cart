@@ -23,7 +23,7 @@ function NavBar() {
 
         <div className='nav_logoContainer'>
           <div className='nav_logo'>
-            <FontAwesomeIcon icon={faPaw} />
+            <FontAwesomeIcon icon={faPaw} rotation={270} />
           </div>
           <div className='nav_title'>DogRun</div>
         </div>

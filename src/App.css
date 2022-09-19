@@ -59,20 +59,20 @@ a:link {
 .navBarUL > li {
     display: inline-block;
     position: relative;
-    color: #0087ca;
+    color: #05386b;
 }
 
 .navBarUL > li::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 110%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0;
+    bottom: -26px;
     left: 0;
-    background-color: #0087ca;
+    background-color: #05386b;
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.15s ease-out;
 }
 
 .navBarUL > li:hover::after {
@@ -110,9 +110,18 @@ a:link {
 
 }
 
+.nav_logo {
+    font-size: 27px;
+    margin-top: 16px;
+    margin-right: 4px;
+}
+
+
+
 /* home */
 
 .greenDog {
     width: 100%;
     height: auto;
 }
+

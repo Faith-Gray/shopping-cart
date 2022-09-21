@@ -10,14 +10,14 @@
 }
 
 body {
-    background-color: edf5e1 ;
+    background-color: #edf5e1;
 }
 
 :root {
-	--mainColor: #29335c;
-	--mainColorLight: #5767aa;
-	--secondaryColor: #db2b39;
-	--textColor: #eee;
+	--mainColor: #05386b;
+	--mainColorLight: #edf5e1;
+	--secondaryColor: #5cdb95;
+	--textColor: #05386b;
 }
 
 /* navbar */

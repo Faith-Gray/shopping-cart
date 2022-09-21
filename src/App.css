@@ -122,9 +122,21 @@ a:link {
 	.nav-dropdown-btn {
         display: block;
 		opacity: 1;
+        position: absolute;
+		top: 2rem;
+		left: 2rem;
 	}
 
-	.navBar {
+    .navBarUL {
+        display: none;
+    }    
+
+    .nav_logoContainer {
+        align-self: center;
+        align-content: center;
+    }
+
+	/* .navBar {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -141,13 +153,9 @@ a:link {
 
 	.navBar {
 		transform: none;
-	}
+	} */
 
-	.nav-dropdown-btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
+
 
 
 }

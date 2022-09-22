@@ -7,12 +7,13 @@ import Walk from './Components/Walk';
 import Chains from './Components/Chains';
 import Reviews from './Components/Reviews';
 import NavBar from './Components/NavBar';
-
+import SideNavBar from './Components/SideNavBar';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <SideNavBar />
 
 
 

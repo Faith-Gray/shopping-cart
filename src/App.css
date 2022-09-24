@@ -174,7 +174,7 @@ a:link {
 
     .secondSideNavUL {
         list-style-type: none;
-        padding-top: 2vh;
+        padding-top: 3vh;
 
     }
 
@@ -187,6 +187,11 @@ a:link {
     .secondSideNavUL > li {
         padding-bottom: 2vh;
         padding-top: 2vh;
+        color: rgb(5, 56, 107, 80%);
+    }
+
+    .secondSideNavUL > li:hover {
+        color: rgb(5, 56, 107, 100%);
     }
 
 

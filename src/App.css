@@ -145,18 +145,43 @@ a:link {
 	}
 
     .sideNavBar {
-        display: absolute;
+        display: block;
         flex-direction: column;
-        width: 400px;
-        height: 100vh;
         background-color: cyan;
         z-index: 9000;
+        position: fixed;
+        /* inset: 0 max(10px, 30%) 0 0; */
+        inset: 0 30% 0 0;
+        width: 400px;
+        
+    }
+
+    .nav-close-btn {
+        margin: 20px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #05386b;
+        font-size: 25px;
+    }
+
+
+
+}
+
+/* @media only screen and (max-width: 600px) {
+
+
+    .sideNavBar {
+   
+        inset: 0 30% 0 0;
+
     }
 
 
 
 
-}
+} */
 
 
 

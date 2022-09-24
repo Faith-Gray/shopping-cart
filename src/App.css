@@ -145,10 +145,12 @@ a:link {
 	}
 
     .sideNavBar {
-        display: flex;
+        display: absolute;
         flex-direction: column;
         width: 400px;
+        height: 100vh;
         background-color: cyan;
+        z-index: 9000;
     }
 
 

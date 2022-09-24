@@ -40,7 +40,7 @@ function SideNavBar() {
         </ul>
 
         <ul className='secondSideNavUL'>
-          <li>
+          <li className='shippingInfo'>
             Shipping Info
           </li>
           <li>

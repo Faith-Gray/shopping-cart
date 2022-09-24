@@ -153,11 +153,12 @@ a:link {
         /* inset: 0 max(10px, 30%) 0 0; */
         inset: 0 30% 0 0;
         width: 400px;
+        padding: 40px;
         
     }
 
     .nav-close-btn {
-        margin: 20px;
+       
         border: none;
         outline: none;
         background-color: transparent;
@@ -165,6 +166,28 @@ a:link {
         font-size: 25px;
     }
 
+    .mainSideNavUL {
+        margin-top: 2em;
+        list-style-type: none;
+
+    }
+
+    .secondSideNavUL {
+        list-style-type: none;
+        padding-top: 2vh;
+
+    }
+
+    .mainSideNavUL > li{
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+        border-bottom: 1px solid #05386b;
+    }
+
+    .secondSideNavUL > li {
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+    }
 
 
 }

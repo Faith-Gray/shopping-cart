@@ -115,9 +115,7 @@ a:link {
     margin-right: 4px;
 }
 
-.sideNavBar {
- display: none;
-}
+
 
 
 /* navbar mobile */
@@ -218,7 +216,8 @@ a:link {
     background-color: rgb(0,0,0); /* Black fallback color */
     background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
     overflow-x: hidden; 
-    transition: 0.5s
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 /* home */

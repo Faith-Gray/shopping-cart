@@ -1,7 +1,11 @@
-function Overlay({ isNavExpanded }) {
+function Overlay({ isNavExpanded, setIsNavExpanded }) {
     return (
-      <div className={isNavExpanded ? "overlay" : "overlay-active"}>
-       
+      <div className={isNavExpanded ? "overlay" : "overlay-active"}
+      onClick={() => {
+        setIsNavExpanded(!isNavExpanded);
+      }}  
+      >
+      
       </div>
     );
 }

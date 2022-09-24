@@ -4,16 +4,18 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const handleClose = console.log('click');
 
-function SideNavBar() {
+function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
     return (
       
-      <nav className='sideNavBarClosed'>
+      <nav className={isNavExpanded ? 'sideNavBarClosed' : 'sideNavBar'} >
         <button
 					className="nav-close-btn"
 
-					onClick={handleClose}>
+					onClick={() => {
+            setIsNavExpanded(!isNavExpanded);
+          }}
+          >
 
           <FontAwesomeIcon icon={faClose} />
 				</button>

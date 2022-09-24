@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="App">
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
-      <SideNavBar />
-      <Overlay isNavExpanded={isNavExpanded} />
+      <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
+      <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
 
 
 

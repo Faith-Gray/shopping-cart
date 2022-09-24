@@ -9,7 +9,7 @@ const handleClose = console.log('click');
 function SideNavBar() {
     return (
       
-      <nav className='sideNavBar'>
+      <nav className='sideNavBarClosed'>
         <button
 					className="nav-close-btn"
 

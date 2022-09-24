@@ -6,9 +6,8 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
-const handleNavBar = console.log('click');
 
-function NavBar(isNavExpanded, setIsNavExpanded) {
+function NavBar({ isNavExpanded, setIsNavExpanded }) {
     return (
       
       <nav className='navBar'>
@@ -17,7 +16,8 @@ function NavBar(isNavExpanded, setIsNavExpanded) {
 
 					onClick={() => {
             setIsNavExpanded(!isNavExpanded);
-          }}>
+          }}
+          >
 
           <FontAwesomeIcon icon={faBars} />
 				</button>

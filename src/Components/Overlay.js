@@ -1,6 +1,6 @@
-function Overlay() {
+function Overlay({ isNavExpanded }) {
     return (
-      <div className="overlay">
+      <div className={isNavExpanded ? "overlay" : "overlay-active"}>
        
       </div>
     );

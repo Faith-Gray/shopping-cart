@@ -13,14 +13,14 @@ import Overlay from './Components/Overlay';
 
 
 function App() {
-  const [ isNavExpanded, setIsNavExpanded ] = useState(false);
+  const [ isNavExpanded, setIsNavExpanded ] = useState(true);
 
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar />
-      <Overlay />
+      <Overlay isNavExpanded={isNavExpanded} />
 
 
 

@@ -8,14 +8,16 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const handleNavBar = console.log('click');
 
-function NavBar() {
+function NavBar(isNavExpanded, setIsNavExpanded) {
     return (
       
       <nav className='navBar'>
         <button
 					className="nav-dropdown-btn"
 
-					onClick={handleNavBar}>
+					onClick={() => {
+            setIsNavExpanded(!isNavExpanded);
+          }}>
 
           <FontAwesomeIcon icon={faBars} />
 				</button>
@@ -59,7 +61,7 @@ function NavBar() {
         
       </nav>
   
-  
+          
 
       
     );

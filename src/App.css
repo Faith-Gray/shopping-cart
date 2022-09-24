@@ -14,10 +14,9 @@ body {
 }
 
 :root {
-	--mainColor: #05386b;
-	--mainColorLight: #edf5e1;
+	--fontColor: #05386b;
+	--backgroundColor: #edf5e1;
 	--secondaryColor: #5cdb95;
-	--textColor: #05386b;
 }
 
 /* navbar */
@@ -37,7 +36,7 @@ body {
 
 a:visited {
     text-decoration: none;
-    color: #05386b;
+    color: var(--fontColor);
 
 }
 
@@ -48,18 +47,18 @@ a:link {
 .navBar {
     display: flex;
     flex-direction: row;
-    background-color: #edf5e1;
+    background-color: var(--backgroundColor);
     height: 85px;
     text-align: center;
     align-items: center;
 	padding: 0 2rem;
-    color: #05386b;
+    color: var(--fontColor);
 }
 
 .navBarUL > li {
     display: inline-block;
     position: relative;
-    color: #05386b;
+    color: var(--fontColor);
 }
 
 .navBarUL > li::after {
@@ -70,7 +69,7 @@ a:link {
     height: 2px;
     bottom: -26px;
     left: 0;
-    background-color: #05386b;
+    background-color: var(--fontColor);
     transform-origin: bottom right;
     transition: transform 0.15s ease-out;
 }
@@ -147,7 +146,7 @@ a:link {
     .sideNavBar {
         display: block;
         flex-direction: column;
-        background-color: cyan;
+        background-color: var(--backgroundColor);
         z-index: 9000;
         position: fixed;
         /* inset: 0 max(10px, 30%) 0 0; */
@@ -162,8 +161,9 @@ a:link {
         border: none;
         outline: none;
         background-color: transparent;
-        color: #05386b;
+        color: var(--fontColor);
         font-size: 25px;
+        cursor: pointer;
     }
 
     .mainSideNavUL {
@@ -181,7 +181,7 @@ a:link {
     .mainSideNavUL > li{
         padding-bottom: 2vh;
         padding-top: 2vh;
-        border-bottom: 1px solid #05386b;
+        border-bottom: 1px solid var(--fontColor);
     }
 
     .secondSideNavUL > li {
@@ -191,7 +191,7 @@ a:link {
     }
 
     .secondSideNavUL > li:hover {
-        color: rgb(5, 56, 107, 100%);
+        color: var(--fontColor);
     }
 
 
@@ -212,6 +212,23 @@ a:link {
 } */
 
 
+
+/* overlay */
+.overlay {
+    display: none;
+}
+
+.overlay-active {
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
+    overflow-x: hidden; 
+    transition:}
 
 /* home */
 

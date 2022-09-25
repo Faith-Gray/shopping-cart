@@ -7,13 +7,45 @@ import { motion } from 'framer-motion';
 
 function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
   const variants = {
-    open: { opacity: 100, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
+    // open: { opacity: 10, x: 1},
+    // closed: { opacity: 0, x: -50 },
+
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 }
+      }
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 }
+        
+      }
+    }
+
+    // open: {
+   
+    //   opacity: 1,
+    //   transition: {
+    //     x: { stiffness: 1000, velocity: -100 }
+    //   }
+    // },
+    // closed: {
+    
+    //   opacity: 0,
+    //   transition: {
+    //     x: { stiffness: 1000 }
+        
+    //   }
+    // }
   }
 
   return (
     <motion.nav
-      animate={isNavExpanded ? "closed" : "open" }
+      animate={isNavExpanded ? "open" : "closed" }
       variants={variants}
     >
     

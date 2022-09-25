@@ -1,24 +1,35 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
-
+import { motion } from 'framer-motion';
 
 
 
 function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
-    return (
-      
-      <nav className={isNavExpanded ? 'sideNavBarClosed' : 'sideNavBar'} >
-        <button
-					className="nav-close-btn"
+  const variants = {
+    open: { opacity: 100, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  }
 
-					onClick={() => {
+  return (
+    <motion.nav
+      animate={isNavExpanded ? "closed" : "open" }
+      variants={variants}
+    >
+    
+      {/* // <nav className={isNavExpanded ? 'sideNavBarClosed' : 'sideNavBar'} > */}
+      <nav className='sideNavBar' >
+
+        <button
+          className="nav-close-btn"
+
+          onClick={() => {
             setIsNavExpanded(!isNavExpanded);
           }}
           >
 
           <FontAwesomeIcon icon={faClose} />
-				</button>
+        </button>
 
         <ul className='mainSideNavUL'>
           <li>
@@ -63,11 +74,11 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
         </div>
         
       </nav>
-  
-  
 
-      
-    );
+
+    </motion.nav>
+    
+  );
 }
   
 export default SideNavBar;

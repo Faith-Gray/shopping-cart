@@ -10,37 +10,38 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
     // open: { opacity: 10, x: 1},
     // closed: { opacity: 0, x: -50 },
 
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 }
-      }
-    },
-    closed: {
-      y: 50,
-      opacity: 0,
-      transition: {
-        y: { stiffness: 1000 }
-        
-      }
-    }
-
     // open: {
-   
+    //   y: 0,
     //   opacity: 1,
     //   transition: {
-    //     x: { stiffness: 1000, velocity: -100 }
+    //     y: { stiffness: 1000, velocity: -100 }
     //   }
     // },
     // closed: {
-    
+    //   y: 50,
     //   opacity: 0,
     //   transition: {
-    //     x: { stiffness: 1000 }
+    //     y: { stiffness: 1000 }
         
     //   }
     // }
+    
+
+    open: {
+   
+      opacity: 1,
+      transition: {
+        x: { stiffness: 1000, velocity: -100 }
+      }
+    },
+    closed: {
+    
+      opacity: 0,
+      transition: {
+        x: { stiffness: 1000 }
+        
+      }
+    }
   }
 
   return (

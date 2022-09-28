@@ -115,7 +115,9 @@ a:link {
     margin-right: 4px;
 }
 
-
+.sideNavBar {
+    display: none;
+}
 
 
 /* navbar mobile */
@@ -144,7 +146,7 @@ a:link {
     .sideNavBar {
         display: block;
         flex-direction: column;
-        background-color: var(--backgroundColor);
+        background-color: teal;
         z-index: 9000;
         position: fixed;
         /* inset: 0 max(10px, 30%) 0 0; */

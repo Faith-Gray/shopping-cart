@@ -7,24 +7,24 @@ import { motion } from 'framer-motion';
 
 function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
   const variants = {
-    open: { opacity: 10, x: 1},
-    closed: { opacity: 0, x: -50 },
+    // open: { opacity: 10, x: 1},
+    // closed: { opacity: 0, x: 50 },
 
-    // open: {
-    //   y: 0,
-    //   opacity: 1,
-    //   transition: {
-    //     y: { stiffness: 1000, velocity: -100 }
-    //   }
-    // },
-    // closed: {
-    //   y: 50,
-    //   opacity: 0,
-    //   transition: {
-    //     y: { stiffness: 1000 }
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 }
+      }
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 }
         
-    //   }
-    // }
+      }
+    }
     
 
     // open: {
@@ -50,8 +50,8 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
       variants={variants}
     >
     
-      <nav className={isNavExpanded ? 'sideNavBarClosed' : 'sideNavBar'} >
-      {/* <nav className='sideNavBar' > */}
+      {/* <nav className={isNavExpanded ? 'sideNavBar' : 'sideNavBarClosed'} > */}
+      <nav className='sideNavBar' >
 
         <button
           className="nav-close-btn"

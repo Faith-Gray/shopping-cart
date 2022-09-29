@@ -7,24 +7,25 @@ import { motion } from 'framer-motion';
 
 function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
   const variants = {
-    // open: { opacity: 10, x: 1},
-    // closed: { opacity: 0, x: 50 },
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: -50 },
 
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 }
-      }
-    },
-    closed: {
-      y: 50,
-      opacity: 0,
-      transition: {
-        y: { stiffness: 1000 }
+    // open: {
+    //   initial={ opacity: 0 },
+    //   y: 0,
+    //   opacity: 1,
+    //   transition: {
+    //     y: { stiffness: 1000, velocity: -100 }
+    //   }
+    // },
+    // closed: {
+    //   y: 50,
+    //   opacity: 0,
+    //   transition: {
+    //     y: { stiffness: 1000 }
         
-      }
-    }
+    //   }
+    // }
     
 
     // open: {

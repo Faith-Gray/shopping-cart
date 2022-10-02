@@ -50,22 +50,23 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
 
 
       open: {
-        //x: 0,
+        x: 0,
         opacity: 1,
         transition: {
-          x: { velocity: 100 },
-          duration: 0.3
+          x: { velocity: 5000 },
+          duration: 0.1
         }
       },
       closed: {
-        //x: -250,
-        opacity: 0,
+        x: -400,
+        opacity: 1,
         transition: {
-          x: { velocity: 100 },
-          duration: 0.3
+          x:
+          { velocity: 100 },
+          duration: 0.1
         }
       }
-      
+
   }
 
   return (

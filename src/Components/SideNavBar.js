@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 
 
 function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
+
+  const hide = () => setIsNavExpanded(false);
+
   const variants = {
     // open: { opacity: 1
     //   // transition: { x: 100 }
@@ -90,23 +93,36 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
         </button>
 
         <ul className='mainSideNavUL'>
+          
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/"
+            onClick={hide}
+            >HOME</Link>
           </li>
           <li>
-            <Link to="/shop">SHOP ALL</Link>
+            <Link to="/shop"
+            onClick={hide}
+            >SHOP ALL</Link>
           </li>
           <li>
-            <Link to="/wear">WEAR</Link>
+            <Link to="/wear"
+            onClick={hide}
+            >WEAR</Link>
           </li>
           <li>
-            <Link to="/walk">WALK / HARNESS</Link>
+            <Link to="/walk"
+            onClick={hide}
+            >WALK / HARNESS</Link>
           </li>
           <li>
-            <Link to="/chains">CHAINS</Link>
+            <Link to="/chains"
+            onClick={hide}
+            >CHAINS</Link>
           </li>
           <li>
-            <Link to="/reviews">REVEIWS</Link>
+            <Link to="/reviews"
+            onClick={hide}
+            >REVEIWS</Link>
           </li>
         </ul>
 

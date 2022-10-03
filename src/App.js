@@ -10,6 +10,7 @@ import NavBar from './Components/NavBar';
 import SideNavBar from './Components/SideNavBar';
 import { useState } from 'react';
 import Overlay from './Components/Overlay';
+import { faSign } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -42,3 +43,16 @@ function App() {
 }
 
 export default App;
+
+
+// Psuedocode
+// Refactor nav bar to be its own component and to map out each link to make code more dry. I want one place for the links to be updated/added.
+// I need to fix the mobile navbar slide out
+// I need the mobile nav bar to close when I click on a link 
+// I need to update the home page dog picture 
+// then I need to learn e commerce library 
+// I need to implement testing wtih something. I think maybe with the ecommerce site with fake data 
+// or during the shopping cart calculation 
+// I need to use square api for the cart and check out 
+// I need to use framer to slide across the product pictures and to have the products load onto the page.App
+

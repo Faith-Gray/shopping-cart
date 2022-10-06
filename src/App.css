@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Permanent Marker', cursive;
     font-family: 'Quicksand', sans-serif;
+    /* color: #05386b; */
     
 }
 
@@ -127,7 +128,7 @@ a:link {
 	.nav-dropdown-btn {
         display: block;
         margin-right: auto;
-		
+		font-size: 18px;
 	}
 
     .navBarUL {
@@ -232,3 +233,31 @@ a:link {
     height: auto;
 }
 
+/* sortbar */
+
+.sortBar {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    /* border-color: rgba(5, 56, 107, 80%); */
+    border-top: 1px solid rgba(5, 56, 107, 25%);
+    border-bottom: 1px solid rgba(5, 56, 107, 25%);
+    
+}
+
+.gridContainers {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort, .filter {
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    border-left: 1px solid rgba(5, 56, 107, 25%);;
+}
+
+.sort {
+    margin-left: auto;
+}

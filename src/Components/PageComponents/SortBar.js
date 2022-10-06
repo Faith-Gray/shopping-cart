@@ -5,7 +5,7 @@ import { faTableCells } from '@fortawesome/free-solid-svg-icons';
 
 function sortBar() {
     return (
-        <div>
+        <div className='sortBar'>
             <div className='gridContainers'>
                 <div className='smallGrid'>
                     <FontAwesomeIcon icon={faTableCellsLarge} />

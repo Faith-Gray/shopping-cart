@@ -255,13 +255,17 @@ a:link {
 
 .smallGrid {
     padding-left: 1em;
+
 }
 
 .bigGrid {
     padding-left: 1em;
     padding-right: 1.2em;
-    color: rgba(5, 56, 107, 25%);
 
+}
+
+.fi-sr-grid {
+    color: rgba(5, 56, 107, 50%);
 }
 
 .sort, .filter {

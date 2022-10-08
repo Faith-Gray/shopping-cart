@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@300;400;500;600&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 
 * {
     margin: 0;
@@ -248,6 +249,19 @@ a:link {
 .gridContainers {
     display: flex;
     flex-direction: row;
+    border-right: 1px solid rgba(5, 56, 107, 25%);
+    align-items: center;
+}
+
+.smallGrid {
+    padding-left: 1em;
+}
+
+.bigGrid {
+    padding-left: 1em;
+    padding-right: 1.2em;
+    color: rgba(5, 56, 107, 25%);
+
 }
 
 .sort, .filter {
@@ -255,7 +269,7 @@ a:link {
     padding-bottom: 1.3em;
     padding-left: 3.5em;
     padding-right: 3.5em;
-    border-left: 1px solid rgba(5, 56, 107, 25%);;
+    border-left: 1px solid rgba(5, 56, 107, 25%);
 }
 
 .sort {

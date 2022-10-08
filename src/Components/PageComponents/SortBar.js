@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTableCellsLarge } from '@fortawesome/free-solid-svg-icons';
-import { faTableCells } from '@fortawesome/free-solid-svg-icons';
 
 
 function sortBar() {
@@ -8,10 +5,10 @@ function sortBar() {
         <div className='sortBar'>
             <div className='gridContainers'>
                 <div className='smallGrid'>
-                    <FontAwesomeIcon icon={faTableCellsLarge} />
+                    <i class="fi fi-sr-apps"></i>
                 </div>
                 <div className='bigGrid'>
-                    <FontAwesomeIcon icon={faTableCells} />
+                    <i class="fi fi-sr-grid"></i>
                 </div>
             </div>    
             <div className='sort'>

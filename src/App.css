@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Permanent Marker', cursive;
     font-family: 'Quicksand', sans-serif;
-    /* color: #05386b; */
+    color: #05386b;
     
 }
 
@@ -240,7 +240,7 @@ a:link {
     flex-direction: row;
     font-size: 18px;
     /* border-color: rgba(5, 56, 107, 80%); */
-    border-top: 1px solid rgba(5, 56, 107, 25%);
+    /* border-top: 1px solid rgba(5, 56, 107, 25%); */
     border-bottom: 1px solid rgba(5, 56, 107, 25%);
     
 }
@@ -260,4 +260,16 @@ a:link {
 
 .sort {
     margin-left: auto;
+}
+
+
+/* page title */
+.pageTitle {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(5, 56, 107, 25%);
+    border-bottom: 1px solid rgba(5, 56, 107, 25%);
+    font-size: 32px;
+    padding-top: 1.9em;
+    padding-bottom: 1.9em;
 }

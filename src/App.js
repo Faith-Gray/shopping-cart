@@ -45,7 +45,7 @@ function App() {
 export default App;
 
 
-// Psuedocode
+// to do
 // Refactor nav bar to be its own component and to map out each link to make code more dry. I want one place for the links to be updated/added.
 // I need to fix the mobile navbar slide out
 // I need the mobile nav bar to close when I click on a link 
@@ -56,3 +56,9 @@ export default App;
 // I need to use square api for the cart and check out 
 // I need to use framer to slide across the product pictures and to have the products load onto the page.App
 
+//psuedocode
+//I need a component for the productsData, one for the productPage, and one for the product list that lists out the products
+
+
+//state for the grid buttons
+//put the state in the app to control what color the grid buttons are and how the products align gn on

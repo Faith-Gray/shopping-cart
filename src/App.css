@@ -255,13 +255,21 @@ a:link {
 
 .smallGrid {
     padding-left: 1em;
-
+    background: none;
+	color: inherit;
+	border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .bigGrid {
     padding-left: 1em;
     padding-right: 1.2em;
-
+    background: none;
+	color: inherit;
+	border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .fi-sr-grid {

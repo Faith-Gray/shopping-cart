@@ -4,12 +4,12 @@ function sortBar() {
     return (
         <div className='sortBar'>
             <div className='gridContainers'>
-                <div className='smallGrid'>
-                    <i class="fi fi-sr-apps"></i>
-                </div>
-                <div className='bigGrid'>
-                    <i class="fi fi-sr-grid"></i>
-                </div>
+                <button className='smallGrid'>
+                    <i className="fi fi-sr-apps"></i>
+                </button>
+                <button className='bigGrid'>
+                    <i className="fi fi-sr-grid"></i>
+                </button>
             </div>    
             <div className='sort'>
                 Sort

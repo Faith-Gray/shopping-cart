@@ -1,14 +1,36 @@
+import { useState } from 'react';
 
 
-function sortBar() {
+
+function SortBar() {
+    const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(true);
+
+    
     return (
+
         <div className='sortBar'>
             <div className='gridContainers'>
-                <button className='smallGrid'>
-                    <i className="fi fi-sr-apps"></i>
+                <button className='smallGrid'
+                    onClick={() => {
+                        setIsSmallerGridSelected(true);
+                        }}
+                    >
+                    <i className="fi fi-sr-apps"
+                    style={{
+                        color: isSmallerGridSelected ? 'rgba(5, 56, 107)' : 'rgba(5, 56, 107, 50%)',
+                    }}
+                    ></i>
                 </button>
-                <button className='bigGrid'>
-                    <i className="fi fi-sr-grid"></i>
+
+                <button className='bigGrid'
+                    onClick={() => {
+                        setIsSmallerGridSelected(false);
+                        }}
+                    >
+                    <i className="fi fi-sr-grid"
+                        style={{
+                        color: isSmallerGridSelected ? 'rgba(5, 56, 107, 50%)' : 'rgba(5, 56, 107)',
+                    }}></i>
                 </button>
             </div>    
             <div className='sort'>
@@ -21,4 +43,4 @@ function sortBar() {
     );
 }
   
-export default sortBar;
+export default SortBar;

@@ -10,13 +10,13 @@ import NavBar from './Components/NavBar';
 import SideNavBar from './Components/SideNavBar';
 import { useState } from 'react';
 import Overlay from './Components/Overlay';
-import { faSign } from '@fortawesome/free-solid-svg-icons';
+import SortBar from './Components/PageComponents/SortBar';
 
 
 
 function App() {
   const [ isNavExpanded, setIsNavExpanded ] = useState(false);
-
+  // const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
   // const variants = {
   //   open: { opacity: 1, x: 0 },
   //   closed: { opacity: 0, x: "-100%" },
@@ -61,4 +61,4 @@ export default App;
 
 
 //state for the grid buttons
-//put the state in the app to control what color the grid buttons are and how the products align gn on
+//put the state in the app to control what color the grid buttons are and how the products align on the page

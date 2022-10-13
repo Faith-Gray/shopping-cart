@@ -12,3 +12,5 @@ const Product = ({ product }) => {
         </div>
     )
 }
+
+export default Product;

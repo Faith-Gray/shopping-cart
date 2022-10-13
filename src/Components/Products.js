@@ -7,15 +7,17 @@ const products = [
 
 const Products = () => {
     return (
-        <div>
-            {products.map((product) => (
-                <div>
-                    <Product product={product}
-                </div>
-            ))}
-        </div>        
-    )
+        // <div>
+        //     {products.map((product) => (
+        //         <div>
+        //             <Product product={product}
+        //         </div>
+        //     ))}
+        // </div>     
+        
+        <Product product={product}
 
+    );
 }
 
 

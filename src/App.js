@@ -8,13 +8,33 @@ import Chains from './Components/Chains';
 import Reviews from './Components/Reviews';
 import NavBar from './Components/NavBar';
 import SideNavBar from './Components/SideNavBar';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Overlay from './Components/Overlay';
 import SortBar from './Components/PageComponents/SortBar';
+import { commerce } from "./lib/commerce";
+import { Product } from './Components/Products/Product';
+
 
 
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  const fetchProducts = async () => {
+    const { data } = await commerce.products.list();
+
+    setProducts(data);
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  console.log(products);
+
+
+
+
   const [ isNavExpanded, setIsNavExpanded ] = useState(false);
   // const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
   // const variants = {
@@ -27,7 +47,7 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-
+      <Product products={products} />
 
 
       <Routes>

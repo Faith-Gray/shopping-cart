@@ -5,20 +5,20 @@ const products = [
     {id: 2, productName:'hat', productReview: '5 stars', price:'$25'}    
 ];
 
-const Products = () => {
-    return (
-        // <div>
-        //     {products.map((product) => (
-        //         <div>
-        //             <Product product={product}
-        //         </div>
-        //     ))}
-        // </div>     
+// const Products = () => {
+//     return (
+//         // <div>
+//         //     {products.map((product) => (
+//         //         <div>
+//         //             <Product product={product}
+//         //         </div>
+//         //     ))}
+//         // </div>     
         
-        <Product product={product}
+//         <Product product={product}
 
-    );
-}
+//     );
+// }
 
 
 export default Products;

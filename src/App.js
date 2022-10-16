@@ -12,7 +12,8 @@ import { useState, useEffect } from 'react';
 import Overlay from './Components/Overlay';
 import SortBar from './Components/PageComponents/SortBar';
 import { commerce } from "./lib/commerce";
-import { ProductItem } from './Components/Products/ProductItem';
+import ProductItem from './Components/Products/ProductItem';
+import ProductList from './Components/Products/ProductList';
 
 
 
@@ -20,10 +21,18 @@ import { ProductItem } from './Components/Products/ProductItem';
 function App() {
   const [products, setProducts] = useState([]);
 
-  const fetchProducts = async () => {
-    const { data } = await commerce.products.list();
+  // const fetchProducts = async () => {
+  //   const { data } = await commerce.products.list();
 
-    setProducts(data);
+  //   setProducts(data);
+  // }
+
+  const fetchProducts = () => {
+    commerce.products.list().then((products) => {
+      setProducts(products.data);
+    }).catch((error) => {
+      console.log('There was an error fetching the products', error)
+    });
   }
 
   useEffect(() => {
@@ -47,7 +56,7 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-      {/* <Product products={products} /> */}
+      <ProductList products={products} />
 
 
       <Routes>

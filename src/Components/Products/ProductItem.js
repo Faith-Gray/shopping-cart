@@ -2,21 +2,21 @@ import { stripHtml } from "string-strip-html";
 import PropTypes from 'prop-types';
 
 
-const ProductItem = ({ products }) => {
-    const { result } = stripHtml(products.description);
+const ProductItem = ({ product }) => {
+    const { result } = stripHtml(product.description);
 
     return (
         <div className="product__card">
-        <img className="product__image" src={products.image?.url} alt={products.name} />
+        <img className="product__image" src={product.image?.url} alt={product.name} />
         <div className="product__info">
-          <h4 className="product__name">{products.name}</h4>
+          <h4 className="product__name">{product.name}</h4>
           <p className="product__description">
             {/* product description stripped of html tags */}
             {result}
           </p>
           <div className="product__details">
             <p className="product__price">
-              {products.price.formatted_with_symbol}
+              {product.price.formatted_with_symbol}
             </p>
           </div>
         </div>

@@ -9,6 +9,7 @@ const ProductsList = ({ products }) => {
                 <ProductItem
                     key={product.id}
                     product={product}
+                    
                 />
             ))}
         </div>

@@ -299,3 +299,21 @@ a:link {
     padding-top: 1.9em;
     padding-bottom: 1.9em;
 }
+
+/* product card */
+
+.product__card {
+    width: 350px;
+    height: auto;
+    background-color: green;
+}
+
+.product__card-Container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product__image {
+    max-width:100%;
+}
+

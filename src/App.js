@@ -56,7 +56,6 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-      <ProductList products={products} />
 
 
       <Routes>
@@ -67,6 +66,13 @@ function App() {
       <Route path="/chains" element={<Chains />} />
       <Route path="/reviews" element={<Reviews />} />
       </Routes>
+
+
+
+      <ProductList products={products} />
+
+
+
     </div>
   );
 }

@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react';
 import Overlay from './Components/Overlay';
 import SortBar from './Components/PageComponents/SortBar';
 import { commerce } from "./lib/commerce";
-import { Product } from './Components/Products/Product';
+import { ProductItem } from './Components/Products/ProductItem';
 
 
 
@@ -47,7 +47,7 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-      <Product products={products} />
+      {/* <Product products={products} /> */}
 
 
       <Routes>

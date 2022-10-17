@@ -199,6 +199,9 @@ a:link {
         color: var(--fontColor);
     }
 
+    .greenDog {
+        width: 100%;
+    }
 
 }
 
@@ -229,9 +232,16 @@ a:link {
 
 /* home */
 
+.greenOutline {
+    background-color: #009E50;
+}
+
 .greenDog {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #009E50;
 }
 
 /* sortbar */
@@ -310,7 +320,8 @@ a:link {
 
 .product__card-Container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: purple;
 }
 
 .product__image {

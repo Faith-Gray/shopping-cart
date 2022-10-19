@@ -244,6 +244,14 @@ a:link {
     background-color: #009E50;
 }
 
+.homeHeader {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 25px;
+}
+
 /* sortbar */
 
 .sortBar {
@@ -315,8 +323,22 @@ a:link {
 .product__card {
     width: 430px;
     height: auto;
-    background-color: green;
 }
+
+.product__info {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.product__name {
+    padding-top: 15px;
+}
+
+/* .product__price {
+    align-self: center;
+} */
+
 
 /* .product__card-Container {
     display: grid;

@@ -6,8 +6,9 @@ function Home() {
         <div className='greenOutline'>
           <img src={dog} alt="Green Dog" className='greenDog'/>
         </div>
-
-        This is the Home Page
+        <header className='homeHeader'>
+          Customer Favorites
+        </header>
       </div>
     );
 }

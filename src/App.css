@@ -313,18 +313,28 @@ a:link {
 /* product card */
 
 .product__card {
-    width: 350px;
+    width: 430px;
     height: auto;
     background-color: green;
 }
 
-.product__card-Container {
+/* .product__card-Container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: purple;
-}
+} */
 
 .product__image {
     max-width:100%;
 }
 
+.products {
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 35px;
+    margin: 40px;
+}

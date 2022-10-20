@@ -1,7 +1,13 @@
+import SortBar from "./PageComponents/SortBar";
+
+
 function Chains() {
     return (
       <div className="chains">
-            This is the Chains Page
+        <header className="pageTitle">
+          CHAINS & TAGS
+        </header>
+        <SortBar />
       </div>
     );
 }

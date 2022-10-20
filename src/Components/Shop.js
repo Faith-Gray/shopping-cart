@@ -26,7 +26,6 @@ function Shop() {
         SHOP ALL
       </header>
       <SortBar />
-      This is the Shop Page
     </div>
   );
 }

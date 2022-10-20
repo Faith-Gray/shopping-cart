@@ -1,7 +1,12 @@
+import SortBar from "./PageComponents/SortBar";
+
 function Walk() {
     return (
       <div className="walk">
-            This is the Walk Page
+        <header className="pageTitle">
+          WALK
+        </header>
+        <SortBar />
       </div>
     );
 }

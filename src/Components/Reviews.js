@@ -1,7 +1,9 @@
 function Reviews() {
     return (
       <div className="reviews">
-            This is the Reviews Page
+        <header className="pageTitle">
+          REVIEWS
+        </header>
       </div>
     );
 }

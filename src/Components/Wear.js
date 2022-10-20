@@ -1,7 +1,12 @@
+import SortBar from "./PageComponents/SortBar";
+
 function Wear() {
     return (
       <div className="wear">
-            This is the Wear Page
+        <header className="pageTitle">
+          WALK
+        </header>
+        <SortBar />
       </div>
     );
 }

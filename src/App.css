@@ -233,7 +233,7 @@ a:link {
 /* home */
 
 .greenOutline {
-    background-color: #009E50;
+    background-color: #00BE74;
 }
 
 .greenDog {
@@ -250,6 +250,19 @@ a:link {
     padding-top: 70px;
     padding-bottom: 30px;
     font-size: 25px;
+}
+
+.seeMoreBtn {
+    background-color: var(--fontColor);
+    padding: 1em 2em 1em 2em;
+    border: none;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: block;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 /* sortbar */
@@ -362,4 +375,87 @@ a:link {
     justify-content: space-around;
     row-gap: 35px;
     margin: 40px;
+}
+
+/* footer */
+.footer {
+    background-color: var(--fontColor);
+    height: 600px;
+    color: var(--backgroundColor);
+    font-weight: 500;
+    display: flex;
+    list-style: none;
+    /* padding-left: 55px; */
+    padding-top: 55px;
+    justify-content: space-around;
+}
+
+.newsletter {
+    color: var(--backgroundColor);
+    margin-bottom: 15px;
+}
+
+.subscribe {
+    color: var(--backgroundColor);
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.customerSupportSection {
+    color: var(--backgroundColor);
+    
+
+}
+
+.customerSupport {
+    color: var(--backgroundColor);
+    margin-bottom: 15px;
+
+}
+
+.moreInfo {
+    color: var(--backgroundColor);
+    margin-bottom: 15px;
+}
+
+.customerSupportSection > ul > li {
+    color: var(--backgroundColor);
+    list-style: none;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.moreInfoSection {
+    color: var(--backgroundColor);
+
+}
+
+.moreInfoSection >ul >li {
+    color: var(--backgroundColor);
+    list-style: none;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.join {
+    color: var(--backgroundColor);
+    padding-right: 400px;
+ 
+}
+
+.join >ul >li {
+    color: var(--backgroundColor);
+    list-style: none;
+
+}
+
+.emailInput {
+    background-color: var(--backgroundColor);
+    
+}
+
+.joinPack {
+    color: var(--backgroundColor);
+    margin-bottom: 15px;
+
 }

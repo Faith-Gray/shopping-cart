@@ -30,7 +30,7 @@ function Home() {
           Customer Favorites
         </header>
         <ProductList products={products} />
-
+        <button className='seeMoreBtn'>SEE MORE</button>
       </div>
     );
 }

@@ -14,6 +14,7 @@ import SortBar from './Components/PageComponents/SortBar';
 import { commerce } from "./lib/commerce";
 import ProductItem from './Components/Products/ProductItem';
 import ProductList from './Components/Products/ProductList';
+import Footer from './Components/Footer';
 
 
 
@@ -79,7 +80,7 @@ function App() {
 
 
       {/* <ProductList products={products} /> */}
-
+      <Footer/>
 
 
     </div>

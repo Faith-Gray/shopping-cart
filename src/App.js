@@ -28,20 +28,30 @@ function App() {
   // }
 
   const fetchProducts = () => {
-    commerce.products.list().then((products) => {
+    // commerce.products.list().then((products) => {
+    //   setProducts(products.data);
+    // }).catch((error) => {
+    //   console.log('There was an error fetching the products', error)
+    // });
+
+    // commerce.categories.retrieve('category', { type: 'slug' })
+    // .then((category) => console.log(category.walk));
+  
+    commerce.products.list({
+      category_slug: ['walk'],
+    }).then((products) => {
       setProducts(products.data);
     }).catch((error) => {
       console.log('There was an error fetching the products', error)
     });
+    
   }
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
-  console.log(products);
-
-
+ 
 
 
   const [ isNavExpanded, setIsNavExpanded ] = useState(false);

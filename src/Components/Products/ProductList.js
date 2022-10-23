@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 
-const ProductsList = ({ products }) => {
+const ProductList = ({ products }) => {
 
     return (
         <div className="products" id="products">
@@ -16,8 +16,8 @@ const ProductsList = ({ products }) => {
     );
 };
 
-ProductsList.propTypes = {
+ProductList.propTypes = {
     products: PropTypes.array,
 };
 
-export default ProductsList;
+export default ProductList;

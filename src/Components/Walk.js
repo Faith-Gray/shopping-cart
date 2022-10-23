@@ -1,20 +1,17 @@
 import SortBar from "./PageComponents/SortBar";
-import { commerce } from "./lib/commerce";
-import ProductList from './Components/Products/ProductList';
+import { commerce } from "../lib/commerce";
+import ProductList from "./Products/ProductList";
+import { useState, useEffect } from 'react';
+
 
 
 function Walk() {
 
-  const fetchProducts = () => {
-    // commerce.products.list().then((products) => {
-    //   setProducts(products.data);
-    // }).catch((error) => {
-    //   console.log('There was an error fetching the products', error)
-    // });
+  const [products, setProducts] = useState([]);
 
-    // commerce.categories.retrieve('category', { type: 'slug' })
-    // .then((category) => console.log(category.walk));
-  
+
+  const fetchProducts = () => {
+
     commerce.products.list({
       category_slug: ['walk'],
     }).then((products) => {
@@ -28,12 +25,16 @@ function Walk() {
   useEffect(() => {
     fetchProducts();
   }, []);
+
     return (
       <div className="walk">
         <header className="pageTitle">
           WALK
         </header>
         <SortBar />
+        <ProductList products={products} />
+
+
       </div>
     );
 }

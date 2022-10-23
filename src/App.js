@@ -26,19 +26,18 @@ function App() {
 
   //   setProducts(data);
   // }
-
-  const fetchProducts = () => {
+  
+  const fetchProducts = (category) => {
     // commerce.products.list().then((products) => {
     //   setProducts(products.data);
     // }).catch((error) => {
     //   console.log('There was an error fetching the products', error)
     // });
 
-    // commerce.categories.retrieve('category', { type: 'slug' })
-    // .then((category) => console.log(category.walk));
-  
+
+    category = 'walk';
     commerce.products.list({
-      category_slug: ['walk'],
+      category_slug: [category],
     }).then((products) => {
       setProducts(products.data);
     }).catch((error) => {
@@ -66,7 +65,7 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-
+  
 
       <Routes>
       <Route path="/" element={<Home />} />
@@ -79,7 +78,7 @@ function App() {
 
 
 
-      <ProductList products={products} />
+      {/* <ProductList products={products} /> */}
 
 
 

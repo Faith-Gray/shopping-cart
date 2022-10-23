@@ -107,3 +107,4 @@ export default App;
 
 //state for the grid buttons
 //put the state in the app to control what color the grid buttons are and how the products align on the page
+//I love this

@@ -10,7 +10,9 @@ const Footer = () => {
                     type="text"
                     // value={this.state.value}
                     // onChange={this.handleChange}
+                    placeholder="Enter your email address"
                 />
+                <button className="subscribeBtn">SUBSCRIBE</button>
             </div>
             <div className="customerSupportSection">
                 <div className="customerSupport">CUSTOMER SUPPORT</div>

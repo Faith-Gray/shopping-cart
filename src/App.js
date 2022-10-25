@@ -66,7 +66,7 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-  
+      
 
       <Routes>
       <Route path="/" element={<Home />} />

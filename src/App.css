@@ -383,6 +383,8 @@ a:link {
     margin: 40px;
 }
 
+/* need to fix image spacing */
+
 /* footer */
 .footer {
     background-color: var(--fontColor);

@@ -15,7 +15,7 @@ import { commerce } from "./lib/commerce";
 import ProductItem from './Components/Products/ProductItem';
 import ProductList from './Components/Products/ProductList';
 import Footer from './Components/Footer';
-import ProductView from './Components/ProductView';
+import ProductView from './Components/ProductView/ProductView';
 
 
 

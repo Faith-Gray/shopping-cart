@@ -1,0 +1,13 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.productImageContainer {
+    width: 50%;
+    background-color: red;
+}
+
+.productDescriptionContainer {
+    width: 600px;
+}

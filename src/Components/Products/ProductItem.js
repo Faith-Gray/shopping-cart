@@ -1,11 +1,12 @@
 import { stripHtml } from "string-strip-html";
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 
 const ProductItem = ({ product }) => {
     const { result } = stripHtml(product.description);
 
     return (
+        <Link to={`product-view/${product.id}`}>
         <div className="product__card-Container">
             <div className="product__card">
                 <img className="product__image" src={product.image?.url} alt={product.name} />
@@ -23,6 +24,7 @@ const ProductItem = ({ product }) => {
                 </div>
             </div>
         </div>
+        </Link>
 
     );
 };

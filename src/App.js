@@ -19,7 +19,24 @@ import Footer from './Components/Footer';
 
 
 
+
 function App() {
+
+  const [cart, setCart] = useState({});
+
+  const fetchCart = () => {
+    commerce.cart.retrieve().then((cart) => {
+      setCart(cart);
+    }).catch((error) => {
+      console.log('There was an error fetching the cart', error);
+    });
+  }
+
+  useEffect(() => {
+    fetchProducts();
+    fetchCart();
+  }, []);
+
   const [products, setProducts] = useState([]);
 
   // const fetchProducts = async () => {
@@ -29,27 +46,27 @@ function App() {
   // }
   
   const fetchProducts = (category) => {
-    // commerce.products.list().then((products) => {
-    //   setProducts(products.data);
-    // }).catch((error) => {
-    //   console.log('There was an error fetching the products', error)
-    // });
-
-
-    category = 'walk';
-    commerce.products.list({
-      category_slug: [category],
-    }).then((products) => {
+    commerce.products.list().then((products) => {
       setProducts(products.data);
     }).catch((error) => {
       console.log('There was an error fetching the products', error)
     });
-    
   }
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  //   category = 'walk';
+  //   commerce.products.list({
+  //     category_slug: [category],
+  //   }).then((products) => {
+  //     setProducts(products.data);
+  //   }).catch((error) => {
+  //     console.log('There was an error fetching the products', error)
+  //   });
+    
+  // }
+
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
 
  
 

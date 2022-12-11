@@ -31,7 +31,7 @@ body {
 
 .navBarUL > li {
     margin-left: 40px;
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 16px;
 }
 
@@ -254,7 +254,7 @@ a:link {
     justify-content: center;
     padding-top: 70px;
     padding-bottom: 30px;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .seeMoreBtn {
@@ -331,7 +331,7 @@ a:link {
     justify-content: center;
     /* border-top: 1px solid rgba(5, 56, 107, 25%); */
     border-bottom: 1px solid rgba(5, 56, 107, 25%);
-    font-size: 32px;
+    font-size: 50px;
     padding-top: 1.9em;
     padding-bottom: 1.9em;
     margin-top: 85px;
@@ -396,6 +396,7 @@ a:link {
     /* padding-left: 55px; */
     padding-top: 55px;
     justify-content: space-around;
+    font-size: 18px;
 }
 
 .newsletter {
@@ -466,7 +467,7 @@ a:link {
     width: 90%;
     height: 40px;
     color: var(--backgroundColor);
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 15px;
     padding-right: 15px;
     font-weight: 500;
@@ -489,6 +490,6 @@ a:link {
     color: var(--fontColor) ;
     font-weight: 600;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 }
 

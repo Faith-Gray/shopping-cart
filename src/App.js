@@ -15,6 +15,7 @@ import { commerce } from "./lib/commerce";
 import ProductItem from './Components/Products/ProductItem';
 import ProductList from './Components/Products/ProductList';
 import Footer from './Components/Footer';
+import ProductView from './Components/ProductView';
 
 
 
@@ -22,22 +23,22 @@ import Footer from './Components/Footer';
 
 function App() {
 
-  const [cart, setCart] = useState({});
+  // const [cart, setCart] = useState({});
 
-  const fetchCart = () => {
-    commerce.cart.retrieve().then((cart) => {
-      setCart(cart);
-    }).catch((error) => {
-      console.log('There was an error fetching the cart', error);
-    });
-  }
+  // const fetchCart = () => {
+  //   commerce.cart.retrieve().then((cart) => {
+  //     setCart(cart);
+  //   }).catch((error) => {
+  //     console.log('There was an error fetching the cart', error);
+  //   });
+  // }
 
-  useEffect(() => {
-    fetchProducts();
-    fetchCart();
-  }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  //   fetchCart();
+  // }, []);
 
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
   // const fetchProducts = async () => {
   //   const { data } = await commerce.products.list();
@@ -45,13 +46,13 @@ function App() {
   //   setProducts(data);
   // }
   
-  const fetchProducts = (category) => {
-    commerce.products.list().then((products) => {
-      setProducts(products.data);
-    }).catch((error) => {
-      console.log('There was an error fetching the products', error)
-    });
-  }
+  // const fetchProducts = (category) => {
+  //   commerce.products.list().then((products) => {
+  //     setProducts(products.data);
+  //   }).catch((error) => {
+  //     console.log('There was an error fetching the products', error)
+  //   });
+  // }
 
   //   category = 'walk';
   //   commerce.products.list({
@@ -92,6 +93,8 @@ function App() {
       <Route path="/walk" element={<Walk />} />
       <Route path="/chains" element={<Chains />} />
       <Route path="/reviews" element={<Reviews />} />
+      <Route path="/product-view/:id" element={<ProductView />} />
+
       </Routes>
 
 

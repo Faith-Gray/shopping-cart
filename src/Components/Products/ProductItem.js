@@ -6,7 +6,7 @@ const ProductItem = ({ product }) => {
     const { result } = stripHtml(product.description);
 
     return (
-        <Link to={`product-view/${product.id}`}>
+        <Link to={`/product-view/${product.id}`}>
         <div className="product__card-Container">
             <div className="product__card">
                 <img className="product__image" src={product.image?.url} alt={product.name} />

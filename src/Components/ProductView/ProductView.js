@@ -1,17 +1,44 @@
 import { commerce } from "../../lib/commerce";
 import { useState, useEffect } from "react";
 import './ProductView.css';
+import PropTypes from 'prop-types';
 
 const createMarkup = (text) => {
   return { _html: text}
 };
 
-function ProductView() {
+
+
+const ProductView = ({ onAddToCart }) => {
     const [product, setProduct] = useState({});
+    const [cart, setCart] = useState({});
+
+   
+    const fetchCart = () => {
+      commerce.cart.retrieve().then((cart) => {
+        setCart(cart);
+      }).catch((error) => {
+        console.log('There was an error fetching the cart', error);
+      });
+    }
+
+    useEffect(() => {
+      // fetchProducts();
+      fetchCart();
+    }, []);
     
+ const handleAddToCart = (productId, quantity) => {
+      commerce.cart.add(productId, quantity).then((item) => {
+        setCart(item.cart);
+      }).catch((error) => {
+        console.error('There was an error adding the item to the cart', error);
+      });
+    }
+
     const fetchProduct = async (id) => {
         const response = await commerce.products.retrieve(id);
-        const { name, price, image, quantity, description, assets } = response;
+        console.log(response);
+        const { name, price, image, quantity, description, assets, variant_groups } = response;
         setProduct({
             id,
             name,
@@ -20,6 +47,7 @@ function ProductView() {
             src: image?.url,
             price: price.formatted_with_symbol,
             assets,
+            variant_groups,
         });
     };
 
@@ -33,26 +61,40 @@ function ProductView() {
     return (
       <div className="Product View">
 
-        <header className="pageTitle">
-          WALK
-        </header>
+
         <div className="pageContainer">
           <div className="productImageContainer">
           <img className="product__image" src={product.src} alt={product.name}/>
-          {product.image}
-          {product.src}
-          <div>what</div>
+
           </div>
           <div className="productDescriptionContainer">
-            {product.name}
-            {product.price}
-            {product.description}
+            <div className="name">{product.name}</div>
+            <div className="price">{product.price}</div>
 
+            {product.variant_groups?.length ? (
+              <div> Size </div>
+            ) : null }
+            
+            <div className="quantityBtn">
+
+            </div>
+            <button className="addToCartBtn"
+            onClick={handleAddToCart}>
+              ADD TO CART
+            </button>
+            
+            <div className="description"> {product.description}</div>
 
           </div>
         </div>
       </div>
     );
 }
+
+ProductView.propTypes = {
+  product: PropTypes.object,
+  handleAddToCart: PropTypes.func,
+  onAddToCart: () => {},
+};
   
 export default ProductView;

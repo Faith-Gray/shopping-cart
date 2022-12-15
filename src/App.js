@@ -16,6 +16,7 @@ import ProductItem from './Components/Products/ProductItem';
 import ProductList from './Components/Products/ProductList';
 import Footer from './Components/Footer';
 import ProductView from './Components/ProductView/ProductView';
+import CartNav from './Components/Cart/CartNav';
 
 
 
@@ -23,20 +24,54 @@ import ProductView from './Components/ProductView/ProductView';
 
 function App() {
 
-  // const [cart, setCart] = useState({});
 
-  // const fetchCart = () => {
-  //   commerce.cart.retrieve().then((cart) => {
-  //     setCart(cart);
-  //   }).catch((error) => {
-  //     console.log('There was an error fetching the cart', error);
-  //   });
-  // }
 
-  // useEffect(() => {
-  //   fetchProducts();
-  //   fetchCart();
-  // }, []);
+  const [cart, setCart] = useState({});
+
+  const fetchCart = () => {
+    commerce.cart.retrieve().then((cart) => {
+      setCart(cart);
+    }).catch((error) => {
+      console.log('There was an error fetching the cart', error);
+    });
+  }
+
+  useEffect(() => {
+    // fetchProducts();
+    fetchCart();
+  }, []);
+
+  const handleAddToCart = (productId, quantity) => {
+    commerce.cart.add(productId, quantity).then((item) => {
+      setCart(item.cart);
+    }).catch((error) => {
+      console.error('There was an error adding the item to the cart', error);
+    });
+  }
+
+  const handleUpdateCartQty = (lineItemId, quantity) => {
+    commerce.cart.update(lineItemId, { quantity }).then((resp) => {
+      setCart(resp.cart);
+    }).catch((error) => {
+      console.log('There was an error updating the cart items', error);
+    });
+  }
+
+  const handleRemoveFromCart = (lineItemId) => {
+    commerce.cart.remove(lineItemId).then((resp) => {
+      setCart(resp.cart);
+    }).catch((error) => {
+      console.error('There was an error removing the item from the cart', error);
+    });
+  }
+
+  const handleEmptyCart = () => {
+    commerce.cart.empty().then((resp) => {
+      setCart(resp.cart);
+    }).catch((error) => {
+      console.error('There was an error emptying the cart', error);
+    });
+  }
 
   // const [products, setProducts] = useState([]);
 
@@ -84,8 +119,14 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-      
+      {/* <CartNav
+        cart={cart}
+        handleUpdateCartQty={handleUpdateCartQty}
+        handleRemoveFromCart={handleRemoveFromCart}
+        handleEmptyCart={handleEmptyCart}
+      /> */}
 
+      
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
@@ -93,13 +134,17 @@ function App() {
       <Route path="/walk" element={<Walk />} />
       <Route path="/chains" element={<Chains />} />
       <Route path="/reviews" element={<Reviews />} />
-      <Route path="/product-view/:id" element={<ProductView />} />
+      <Route path="/product-view/:id" element={<ProductView cart={cart}/>} />
 
       </Routes>
 
+      {/* <ProductView 
+      // products={products} 
+      onAddToCart={handleAddToCart}
+      /> */}
 
 
-      {/* <ProductList products={products} /> */}
+
       <Footer/>
 
 

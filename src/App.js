@@ -17,6 +17,7 @@ import ProductList from './Components/Products/ProductList';
 import Footer from './Components/Footer';
 import ProductView from './Components/ProductView/ProductView';
 import CartNav from './Components/Cart/CartNav';
+import Cart from './Components/Cart/Cart';
 
 
 
@@ -73,6 +74,8 @@ function App() {
     });
   }
 
+
+  
   // const [products, setProducts] = useState([]);
 
   // const fetchProducts = async () => {
@@ -134,14 +137,14 @@ function App() {
       <Route path="/walk" element={<Walk />} />
       <Route path="/chains" element={<Chains />} />
       <Route path="/reviews" element={<Reviews />} />
-      <Route path="/product-view/:id" element={<ProductView cart={cart}/>} />
+      <Route path="/cart" element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} onUpdateCartQty={handleUpdateCartQty} />}   />
+
+
+      <Route path="/product-view/:id" element={<ProductView cart={cart} onAddToCart={handleAddToCart} />} />
 
       </Routes>
 
-      {/* <ProductView 
-      // products={products} 
-      onAddToCart={handleAddToCart}
-      /> */}
+
 
 
 

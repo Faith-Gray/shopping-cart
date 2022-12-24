@@ -11,29 +11,12 @@ const createMarkup = (text) => {
 
 const ProductView = ({ onAddToCart }) => {
     const [product, setProduct] = useState({});
-    const [cart, setCart] = useState({});
-
-   
-    const fetchCart = () => {
-      commerce.cart.retrieve().then((cart) => {
-        setCart(cart);
-      }).catch((error) => {
-        console.log('There was an error fetching the cart', error);
-      });
-    }
-
-    useEffect(() => {
-      // fetchProducts();
-      fetchCart();
-    }, []);
     
- const handleAddToCart = (productId, quantity) => {
-      commerce.cart.add(productId, quantity).then((item) => {
-        setCart(item.cart);
-      }).catch((error) => {
-        console.error('There was an error adding the item to the cart', error);
-      });
+    const handleAddToCart = () => {
+      onAddToCart(product.id, 1);
     }
+
+    
 
     const fetchProduct = async (id) => {
         const response = await commerce.products.retrieve(id);

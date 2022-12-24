@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import CartItem from './CartItem';
+import './Cart.css';
 
 const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
 
@@ -29,7 +30,7 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
           className="cart__inner"
         />
     ))
-)
+  )
 
   const renderTotal = () => (
       <div className="cart__total">
@@ -38,6 +39,8 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       </div>
   )
 
+  if(!cart.line_items)
+  return '...loading';
 
   return (
     <div className="cart">

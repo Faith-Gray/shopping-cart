@@ -56,7 +56,9 @@ function NavBar({ isNavExpanded, setIsNavExpanded }) {
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </div>
         <div className='nav_cart'>
-          <FontAwesomeIcon icon={faCartShopping} />
+          <Link to={`/cart`}>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </Link>
         </div>
         
       </nav>

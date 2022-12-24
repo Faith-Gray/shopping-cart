@@ -43,4 +43,4 @@ CartItem.propTypes = {
     handleUpdateCartQty: PropTypes.func,
     onUpdateCartQty: () => {},
     onRemoveFromCart: () => {}
- };
+};

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 
-const ProductList = ({ products, onAddToCart }) => {
+const ProductList = ({ products }) => {
 
     return (
         <div className="products" id="products">
@@ -9,7 +9,6 @@ const ProductList = ({ products, onAddToCart }) => {
                 <ProductItem
                     key={product.id}
                     product={product}
-                    onAddToCart={onAddToCart}
                 />
             ))}
         </div>

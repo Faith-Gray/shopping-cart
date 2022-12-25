@@ -6,19 +6,20 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
 
   const handleEmptyCart = () => {
     onEmptyCart();
-  }
+  };
 
   const renderEmptyMessage = () => {
       if (cart.total_unique_items > 0) {
         return;
-      }
+      } else {
   
       return (
         <p className="cart__none">
           You have no items in your shopping cart, start adding some!
         </p>
-      );
-  }
+      )
+    }
+  };
 
   const renderItems = () => (
     cart.line_items.map((lineItem) => (
@@ -39,8 +40,17 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       </div>
   )
 
-  if(!cart.line_items)
-  return '...loading';
+  // const loading = () => {
+  //   setTimeout(() => {
+  //     "...loading";
+  //   }, 3000);
+
+  // };
+
+  // if(!cart.line_items)
+  // return loading();
+
+  if(!cart.line_items) return 'Loading...'
 
   return (
     <div className="cart">

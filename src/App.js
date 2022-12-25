@@ -10,13 +10,9 @@ import NavBar from './Components/NavBar';
 import SideNavBar from './Components/SideNavBar';
 import { useState, useEffect } from 'react';
 import Overlay from './Components/Overlay';
-import SortBar from './Components/PageComponents/SortBar';
 import { commerce } from "./lib/commerce";
-import ProductItem from './Components/Products/ProductItem';
-import ProductList from './Components/Products/ProductList';
 import Footer from './Components/Footer';
 import ProductView from './Components/ProductView/ProductView';
-import CartNav from './Components/Cart/CartNav';
 import Cart from './Components/Cart/Cart';
 
 
@@ -29,13 +25,23 @@ function App() {
 
   const [cart, setCart] = useState({});
 
-  const fetchCart = () => {
-    commerce.cart.retrieve().then((cart) => {
-      setCart(cart);
-    }).catch((error) => {
-      console.log('There was an error fetching the cart', error);
-    });
-  }
+  // const fetchCart = () => {
+  //   commerce.cart.retrieve().then((cart) => {
+  //     setCart(cart);
+  //   }).catch((error) => {
+  //     console.log('There was an error fetching the cart', error);
+  //   });
+  // }
+
+  const fetchCart = async () => {
+    const response = await commerce.cart.retrieve();
+    setCart(response);
+  };
+
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+    setCart(newCart);
+  };
 
   useEffect(() => {
     // fetchProducts();
@@ -48,7 +54,8 @@ function App() {
     }).catch((error) => {
       console.error('There was an error adding the item to the cart', error);
     });
-  }
+    console.log(cart);
+  };
 
   const handleUpdateCartQty = (lineItemId, quantity) => {
     commerce.cart.update(lineItemId, { quantity }).then((resp) => {
@@ -56,7 +63,7 @@ function App() {
     }).catch((error) => {
       console.log('There was an error updating the cart items', error);
     });
-  }
+  };
 
   const handleRemoveFromCart = (lineItemId) => {
     commerce.cart.remove(lineItemId).then((resp) => {
@@ -64,15 +71,20 @@ function App() {
     }).catch((error) => {
       console.error('There was an error removing the item from the cart', error);
     });
-  }
+  };
 
-  const handleEmptyCart = () => {
-    commerce.cart.empty().then((resp) => {
-      setCart(resp.cart);
-    }).catch((error) => {
-      console.error('There was an error emptying the cart', error);
-    });
-  }
+  // const handleEmptyCart = () => {
+  //   commerce.cart.empty().then((resp) => {
+  //     setCart(resp.cart);
+  //   }).catch((error) => {
+  //     console.error('There was an error emptying the cart', error);
+  //   });
+  // }
+
+  const handleEmptyCart = async () => {
+    const response = await commerce.cart.empty();
+    setCart(response.cart);
+  };
 
 
   

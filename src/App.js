@@ -86,39 +86,6 @@ function App() {
     setCart(response.cart);
   };
 
-
-  
-  // const [products, setProducts] = useState([]);
-
-  // const fetchProducts = async () => {
-  //   const { data } = await commerce.products.list();
-
-  //   setProducts(data);
-  // }
-  
-  // const fetchProducts = (category) => {
-  //   commerce.products.list().then((products) => {
-  //     setProducts(products.data);
-  //   }).catch((error) => {
-  //     console.log('There was an error fetching the products', error)
-  //   });
-  // }
-
-  //   category = 'walk';
-  //   commerce.products.list({
-  //     category_slug: [category],
-  //   }).then((products) => {
-  //     setProducts(products.data);
-  //   }).catch((error) => {
-  //     console.log('There was an error fetching the products', error)
-  //   });
-    
-  // }
-
-  // useEffect(() => {
-  //   fetchProducts();
-  // }, []);
-
  
 
 
@@ -134,12 +101,7 @@ function App() {
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
-      {/* <CartNav
-        cart={cart}
-        handleUpdateCartQty={handleUpdateCartQty}
-        handleRemoveFromCart={handleRemoveFromCart}
-        handleEmptyCart={handleEmptyCart}
-      /> */}
+
 
       
       <Routes>
@@ -152,7 +114,8 @@ function App() {
       <Route path="/cart" element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} onUpdateCartQty={handleUpdateCartQty} />}   />
 
 
-      <Route path="/product-view/:id" element={<ProductView cart={cart} onAddToCart={handleAddToCart} />} />
+
+      <Route path="/product-view/:id" element={<ProductView onAddToCart={handleAddToCart} />} />
 
       </Routes>
 

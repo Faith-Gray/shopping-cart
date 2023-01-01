@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import CartItem from './CartItem';
 import './Cart.css';
 
+
 const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
 
   const handleEmptyCart = () => {
@@ -40,19 +41,11 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       </div>
   )
 
-  // const loading = () => {
-  //   setTimeout(() => {
-  //     "...loading";
-  //   }, 3000);
+  if(!cart.line_items) return 'Loading...';
 
-  // };
-
-  // if(!cart.line_items)
-  // return loading();
-
-  if(!cart.line_items) return 'Loading...'
-
+  
   return (
+    
     <div className="cart">
       <h4 className="cart__heading">Your Shopping Cart</h4>
       { renderEmptyMessage() }

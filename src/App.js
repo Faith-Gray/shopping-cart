@@ -34,18 +34,20 @@ function App() {
   // }
 
   const fetchCart = async () => {
+    
     const response = await commerce.cart.retrieve();
     setCart(response);
   };
 
-  const refreshCart = async () => {
-    const newCart = await commerce.cart.refresh();
-    setCart(newCart);
-  };
+  // const refreshCart = async () => {
+  //   const newCart = await commerce.cart.refresh();
+  //   setCart(newCart);
+  // };
 
   useEffect(() => {
     // fetchProducts();
     fetchCart();
+    
   }, []);
 
   const handleAddToCart = (productId, quantity) => {

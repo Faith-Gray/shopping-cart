@@ -1,3 +1,135 @@
 .cart {
     margin-top: 100px;
+    margin-left: 100px;
+
+}
+
+.cart__heading {
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+.loading {
+    margin-top: 100px;
+    margin-left: 40px;
+
+}
+
+.cart__inner {
+    height: 300px;
+    background-color: gray;
+}
+
+.cart__inner.item {
+    width: 20px;
+}
+
+.cart-item__image {
+    width: 400px;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.cart-item__details {
+    margin-left: 50px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    width: 500px;
+}
+
+.cart-item__details > div {
+    padding-top: 15px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.cart-item__details-name {
+    font-size: 25px;
+}
+
+.cart-item__details-qty {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-item__remove {
+    background-color: var(--fontColor);
+    padding: 1em 2em 1em 2em;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 110px;
+    display: block;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+
+.cart-item__less-btn {
+    background-color: var(--fontColor);
+    padding: .1em 1em .1em 1em;
+    border: none;
+    margin-right: 5px;
+    display: block;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cart-item__add-btn {
+    background-color: var(--fontColor);
+    padding: .1em 1em .1em 1em;
+    border: none;
+    margin-left: 5px;
+    display: block;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cart__total {
+    font-size: 20px;
+
+}
+
+.cart__total-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cart__total-price {
+    margin-bottom: 10px;
+
+}
+
+.cart__btn-empty {
+    background-color: var(--fontColor);
+    padding: 1em 2em 1em 2em;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 110px;
+    margin-right: 20px;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cart__btn-checkout {
+    background-color: var(--fontColor);
+    padding: 1em 2em 1em 2em;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 110px;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
 }

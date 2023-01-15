@@ -43,7 +43,7 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       </div>
   )
 
-  if(!cart?.line_items) return 'Loading...';
+  if(!cart?.line_items) return <div className='loading'> Loading... </div>;
 
   
   return (
@@ -51,7 +51,9 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
     <div className="cart">
       <h4 className="cart__heading">Your Shopping Cart</h4>
       { renderEmptyMessage() }
-      { renderItems() }
+      <div className='cart__render-items'>
+       { renderItems() }
+      </div>
       { renderTotal() }
       <div className="cart__footer">
         <button className="cart__btn-empty" onClick={handleEmptyCart}>Empty cart</button>

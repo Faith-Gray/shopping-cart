@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import CartItem from './CartItem';
 import './Cart.css';
+import { Link } from 'react-router-dom';
 
 // Cart isn't updating until the cart is recreated on every refresh
 
@@ -57,7 +58,12 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       { renderTotal() }
       <div className="cart__footer">
         <button className="cart__btn-empty" onClick={handleEmptyCart}>EMPTY CART</button>
-        <button className="cart__btn-checkout">CHECKOUT</button> 
+        <Link
+          className="cart__btn-checkout"
+          to='/checkout'
+        >
+          CHECKOUT
+        </Link>
       </div>
     </div>
   );

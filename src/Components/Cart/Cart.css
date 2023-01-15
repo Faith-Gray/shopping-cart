@@ -111,7 +111,9 @@
 
 .cart__btn-empty {
     background-color: var(--fontColor);
-    padding: 1em 2em 1em 2em;
+    /* padding: 1em 2em 1em 2em; */
+    width: 150px;
+    height: 40px;
     border: none;
     margin: 0 auto;
     margin-top: 20px;
@@ -124,12 +126,28 @@
 
 .cart__btn-checkout {
     background-color: var(--fontColor);
-    padding: 1em 2em 1em 2em;
+    padding: .92em 2.2em .92em 2.2em;
     border: none;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 110px;
-    color: var(--backgroundColor) ;
+    color: var(--backgroundColor);
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+.cart__btn-checkout:visited {
+    background-color: var(--fontColor);
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 110px;
+    color: var(--backgroundColor);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
 }

@@ -14,6 +14,7 @@ import { commerce } from "./lib/commerce";
 import Footer from './Components/Footer';
 import ProductView from './Components/ProductView/ProductView';
 import Cart from './Components/Cart/Cart';
+import Checkout from './Components/Checkout/Checkout';
 
 
 
@@ -122,6 +123,7 @@ function App() {
 
 
       <Route path="/product-view/:id" element={<ProductView onAddToCart={handleAddToCart} />} />
+      <Route path="/checkout" element={<Checkout />} />
 
       </Routes>
 

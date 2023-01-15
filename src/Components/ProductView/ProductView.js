@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import './ProductView.css';
 import PropTypes from 'prop-types';
 
-const createMarkup = (text) => {
-  return { _html: text}
-};
+// const createMarkup = (text) => {
+//   return { _html: text}
+// };
 
 
 

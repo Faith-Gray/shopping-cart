@@ -24,31 +24,35 @@ function App() {
 
 
   const [cart, setCart] = useState({});
-
-  // const fetchCart = () => {
-  //   commerce.cart.retrieve().then((cart) => {
-  //     setCart(cart);
-  //   }).catch((error) => {
-  //     console.log('There was an error fetching the cart', error);
-  //   });
-  // }
-
-  const fetchCart = async () => {
+  
+  useEffect(() => {
+    // fetchProducts();
+    fetchCart();
     
-    const response = await commerce.cart.retrieve();
-    setCart(response);
-  };
+  }, [cart]);
+
+  const fetchCart = () => {
+    commerce.cart.retrieve().then((cart) => {
+      setCart(cart);
+    }).catch((error) => {
+      console.log('There was an error fetching the cart', error);
+    });
+  }
+
+  // const fetchCart = async () => {
+    
+  //   const response = await commerce.cart.retrieve();
+  //   setCart(response);
+  // };
 
   // const refreshCart = async () => {
   //   const newCart = await commerce.cart.refresh();
   //   setCart(newCart);
   // };
 
-  useEffect(() => {
-    // fetchProducts();
-    fetchCart();
-    
-  }, []);
+
+
+
 
   const handleAddToCart = (productId, quantity) => {
     commerce.cart.add(productId, quantity).then((item) => {

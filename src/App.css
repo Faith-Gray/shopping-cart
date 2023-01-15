@@ -238,15 +238,16 @@ a:link {
 /* home */
 
 .greenOutline {
-    background-color: #00BE74;
+    background-color: #00be75eb;
 }
 
 .greenDog {
     width: auto;
     height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #009E50;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: auto;
+    display: block;
 }
 
 .homeHeader {

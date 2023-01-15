@@ -1,4 +1,6 @@
-import dog from './greenDog.jpg';
+// import dog from './greenDog.jpg';
+import dog from './GDnobg.png';
+
 import { commerce } from "../lib/commerce";
 import ProductList from "./Products/ProductList";
 import { useState, useEffect } from 'react';

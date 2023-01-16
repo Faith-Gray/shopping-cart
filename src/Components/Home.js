@@ -1,6 +1,6 @@
 // import dog from './greenDog.jpg';
 import dog from './GDnobg(2).png';
-
+import { Link } from 'react-router-dom';
 import { commerce } from "../lib/commerce";
 import ProductList from "./Products/ProductList";
 import { useState, useEffect } from 'react';
@@ -32,7 +32,9 @@ function Home() {
           Customer Favorites
         </header>
         <ProductList products={products} />
-        <button className='seeMoreBtn'>SEE MORE</button>
+        <Link to='/shop'>
+         <button className='seeMoreBtn'>SEE MORE</button>
+        </Link>
       </div>
     );
 }

@@ -1,4 +1,9 @@
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
 
@@ -38,10 +43,10 @@ const Footer = () => {
             <div className="join">
                 <div className="joinPack">JOIN OUR PACK</div>
                 <ul className="socialMediaIcons">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <FontAwesomeIcon className='fbIcon' icon={faFacebookF}/>
+                    <li><FontAwesomeIcon className='twitterIcon' icon={ faTwitter }/></li>
+                    <li><FontAwesomeIcon className='linkedinIcon' icon={ faLinkedin }/></li>
+                    <li><FontAwesomeIcon className='githubIcon' icon={ faGithub }/></li>
                 </ul>
             </div>
         </footer>

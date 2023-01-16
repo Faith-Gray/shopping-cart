@@ -1,20 +1,26 @@
 /* footer */
 .footer {
     background-color: var(--fontColor);
-    height: 600px;
+    min-height: 400px;
     color: var(--backgroundColor);
     font-weight: 500;
     display: flex;
     list-style: none;
-    /* padding-left: 55px; */
+    padding-left: 55px;
+    padding-right: 55px;
     padding-top: 55px;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 18px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .newsletter {
     color: var(--backgroundColor);
     margin-bottom: 15px;
+    font-weight: 600;
+
 }
 
 .subscribe {
@@ -25,19 +31,20 @@
 
 .customerSupportSection {
     color: var(--backgroundColor);
-    
 
 }
 
 .customerSupport {
     color: var(--backgroundColor);
     margin-bottom: 15px;
+    font-weight: 600;
 
 }
 
 .moreInfo {
     color: var(--backgroundColor);
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .customerSupportSection > ul > li {
@@ -93,10 +100,13 @@
 .joinPack {
     color: var(--backgroundColor);
     margin-bottom: 15px;
+    font-weight: 600;
+
 }
 
 .subscribeBtn {
     margin-top: 35px;
+    margin-bottom: 35px;
     background-color: var(--backgroundColor);
     padding: 1em 2em 1em 2em;
     border: none;
@@ -106,3 +116,28 @@
     font-size: 18px;
 }
 
+.socialMediaIcons > element {
+    color: var(--backgroundColor);
+}
+
+.socialMediaIcons {
+    width: 130px;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.fbIcon {
+    color: white;
+};
+
+
+@media screen and (min-width: 600px) {
+    .footer {
+        display: flex;
+        background-color: red;
+        flex-direction: column;
+    }
+}

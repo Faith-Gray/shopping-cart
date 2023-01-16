@@ -237,9 +237,30 @@ a:link {
 
 /* home */
 
+@media only screen and (max-width: 1024px) {
+/* mobile */
+    .greenDog {
+        width: auto;
+        height: 600px;
+        /* margin-left: auto; */
+        /* margin-right: 50px; */
+        /* margin: auto; */
+        display: block;
+        
+        
+    }
+
+
+
+}
+
+
+
 .greenOutline {
     /* background-color: #00be75eb; */
     background: radial-gradient(circle, #edae3048 1%, #00be75eb, #12904f);
+    display: grid;
+    place-items: center;
 }
 
 .greenDog {
@@ -247,8 +268,11 @@ a:link {
     height: 600px;
     /* margin-left: auto; */
     /* margin-right: auto; */
-    margin: auto;
-    display: block;
+    /* margin: auto; */
+    /* display: block;
+    display: grid;
+    place-items: center; */
+
 }
 
 .homeHeader {

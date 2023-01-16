@@ -1,5 +1,5 @@
 // import dog from './greenDog.jpg';
-import dog from './GDnobg.png';
+import dog from './GDnobg(2).png';
 
 import { commerce } from "../lib/commerce";
 import ProductList from "./Products/ProductList";

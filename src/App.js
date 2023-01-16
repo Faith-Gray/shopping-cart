@@ -11,7 +11,7 @@ import SideNavBar from './Components/SideNavBar';
 import { useState, useEffect } from 'react';
 import Overlay from './Components/Overlay';
 import { commerce } from "./lib/commerce";
-import Footer from './Components/Footer';
+import Footer from './Components/Footer/Footer';
 import ProductView from './Components/ProductView/ProductView';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';

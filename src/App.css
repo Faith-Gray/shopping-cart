@@ -238,7 +238,8 @@ a:link {
 /* home */
 
 .greenOutline {
-    background-color: #00be75eb;
+    /* background-color: #00be75eb; */
+    background: radial-gradient(circle, #edae3048 1%, #00be75eb, #12904f);
 }
 
 .greenDog {

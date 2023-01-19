@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 function SortBar() {
-    const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(true);
+    const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
 
     
     return (

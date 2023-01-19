@@ -15,6 +15,8 @@ import Footer from './Components/Footer/Footer';
 import ProductView from './Components/ProductView/ProductView';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
+import { faImages } from '@fortawesome/free-solid-svg-icons';
+import SortBar from './Components/PageComponents/SortBar';
 
 
 
@@ -143,19 +145,11 @@ export default App;
 
 // to do
 // Refactor nav bar to be its own component and to map out each link to make code more dry. I want one place for the links to be updated/added.
-// I need to fix the mobile navbar slide out
-// I need the mobile nav bar to close when I click on a link 
-// I need to update the home page dog picture 
-// then I need to learn e commerce library 
-// I need to implement testing wtih something. I think maybe with the ecommerce site with fake data 
-// or during the shopping cart calculation 
 // I need to use square api for the cart and check out 
-// I need to use framer to slide across the product pictures and to have the products load onto the page.App
-
-//psuedocode
-//I need a component for the productsData, one for the productPage, and one for the product list that lists out the products
-
-
-//state for the grid buttons
-//put the state in the app to control what color the grid buttons are and how the products align on the page
-//I love this
+// Have transitions to have every product load in one by one
+// Update the grid buttons to change the size of the product images 
+// Add banners around the main dog for a sale or something
+// Add content to the reviews page 
+// Update the loading screen to show something plus add to all of the pges when the products are loading
+// figure out the check out
+// Add functionality to the sort, filter, and search

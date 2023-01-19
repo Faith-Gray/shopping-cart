@@ -9,7 +9,7 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
 
   const hide = () => setIsNavExpanded(false);
 
-  const variants = {
+  // const variants = {
     // open: { opacity: 1
     //   // transition: { x: 100 }
     // },
@@ -52,34 +52,34 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
     // }
 
 
-      open: {
-        x: 0,
-        opacity: 1,
-        transition: {
-          x: { velocity: 5000 },
-          duration: 0.1
-        }
-      },
-      closed: {
-        x: -400,
-        opacity: 1,
-        transition: {
-          x:
-          { velocity: 100 },
-          duration: 0.1
-        }
-      }
+      // open: {
+      //   x: 0,
+      //   opacity: 1,
+      //   transition: {
+      //     x: { velocity: 5000 },
+      //     duration: 0.1
+      //   }
+      // },
+      // closed: {
+      //   x: -400,
+      //   opacity: 1,
+      //   transition: {
+      //     x:
+      //     { velocity: 100 },
+      //     duration: 0.1
+      //   }
+      // }
 
-  }
+  // }
 
   return (
-    <motion.nav
-      animate={isNavExpanded ? "open" : "closed" }
-      variants={variants}
-    >
+    // <motion.nav
+    //   animate={isNavExpanded ? "open" : "closed" }
+    //   variants={variants}
+    // >
     
-      {/* <nav className={isNavExpanded ? 'sideNavBar' : 'sideNavBarClosed'} > */}
-      <nav className='sideNavBar' >
+      <nav className={isNavExpanded ? 'sideNavBar' : 'sideNavBarClosed'} >
+      {/* <nav className='sideNavBar' > */}
 
         <button
           className="nav-close-btn"
@@ -150,7 +150,7 @@ function SideNavBar({ isNavExpanded, setIsNavExpanded }) {
       </nav>
 
 
-    </motion.nav>
+    // </motion.nav>
     
   );
 }

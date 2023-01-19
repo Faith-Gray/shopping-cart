@@ -135,6 +135,7 @@ a:link {
         display: block;
         margin-right: auto;
 		font-size: 18px;
+        padding-right: 50px;
 	}
 
     .navBarUL {
@@ -152,18 +153,21 @@ a:link {
 	}
 
     .sideNavBar {
+        border-right: 1px solid rgba(5, 56, 107, 25%);
         display: block;
         flex-direction: column;
         background-color: #edf5e1;
         z-index: 9000;
         position: fixed;
-        /* inset: 0 max(10px, 30%) 0 0; */
         inset: 0 30% 0 0;
         width: 400px;
         padding: 40px;
-        /* height: 110% */
-        /* background-color: teal; */
-        
+        overflow: scroll;
+        z-index: 1000;
+        transition: transform .3s
+            cubic-bezier(0, .52, 0, 1);
+        /* transform: translate3d(0vw, 0, 0); */
+        transform: translate(0%, 0%);        
     }
 
     .nav-close-btn {
@@ -210,9 +214,25 @@ a:link {
 
 }
 
-/* .sideNavBarClosed {
-    display: none;
-} */
+.sideNavBarClosed {
+    transition: transform .3s
+    cubic-bezier(0, .52, 0, 1);
+    /* display: none; */
+    /* transform: translate3d(-100vw, 0, 0); */
+    transform: translateX(-100%);
+
+    border-right: 1px solid rgba(5, 56, 107, 25%);
+    display: block;
+    flex-direction: column;
+    background-color: #edf5e1;
+    z-index: 9000;
+    position: fixed;
+    inset: 0 30% 0 0;
+    width: 400px;
+    padding: 40px;
+    overflow: scroll;
+    z-index: 1000;
+}
 
 
 

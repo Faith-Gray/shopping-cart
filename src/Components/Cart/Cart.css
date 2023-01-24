@@ -7,6 +7,8 @@
 .cart__heading {
     font-size: 22px;
     padding-bottom: 15px;
+    margin-top: 150px;
+    margin-bottom: 20px;
 }
 
 .loading {
@@ -150,4 +152,13 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 13px;
+}
+
+.cart__none {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.cart__footer {
+    margin-bottom: 20px;
 }

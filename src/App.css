@@ -105,7 +105,8 @@ a:link {
 
 .nav_cart {
     font-size: 22px;
-
+    z-index: 10;
+    
 }
 
 .nav-dropdown-btn {
@@ -127,6 +128,25 @@ a:link {
     display: none;
 }
 
+.nav_cart_notification {
+    height: 23px;
+    width: 23px;
+    background-color: #00be75eb;
+    border-radius: 50%;
+    display: inline-block;
+    /* border: .001em;
+    border-style: solid; */
+    position: relative;
+    bottom: 11px;
+    left: 37px;
+    z-index: -1;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav_cart_icon {
+    z-index: 8;
+}
 
 /* navbar mobile */
 

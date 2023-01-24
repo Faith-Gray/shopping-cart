@@ -7,7 +7,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function NavBar({ isNavExpanded, setIsNavExpanded }) {
+function NavBar({ isNavExpanded, setIsNavExpanded, cart }) {
+
+    // if(cart?.line_items) return <span className='nav_cart_notification'>13</span>;
+
     return (
       
       <nav className='navBar'>
@@ -57,7 +60,9 @@ function NavBar({ isNavExpanded, setIsNavExpanded }) {
         </div>
         <div className='nav_cart'>
           <Link to={`/cart`}>
-            <FontAwesomeIcon icon={faCartShopping} />
+            {/* if(!cart?.line_items) return  */}
+              <span className='nav_cart_notification'></span>
+            <FontAwesomeIcon className='nav_cart_icon' icon={faCartShopping} />
           </Link>
         </div>
         

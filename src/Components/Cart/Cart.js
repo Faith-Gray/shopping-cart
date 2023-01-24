@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import CartItem from './CartItem';
 import './Cart.css';
 import { Link } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 // Cart isn't updating until the cart is recreated on every refresh
 
@@ -44,7 +45,7 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       </div>
   )
 
-  if(!cart?.line_items) return <div className='loading'> Loading... </div>;
+  if(!cart?.line_items) return <Loading/>;
 
   
   return (

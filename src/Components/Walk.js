@@ -2,6 +2,7 @@ import SortBar from "./PageComponents/SortBar";
 import { commerce } from "../lib/commerce";
 import ProductList from "./Products/ProductList";
 import { useState, useEffect } from 'react';
+import Loading from "./Loading/Loading";
 
 
 
@@ -25,6 +26,8 @@ function Walk() {
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  if(!products) return <Loading/>;
 
     return (
       <div className="walk">

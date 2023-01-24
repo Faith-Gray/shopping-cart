@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
+import Loading from '../Loading/Loading';
 
 const ProductList = ({ products }) => {
+    // if(products) return <Loading/>;
 
     return (
         <div className="products" id="products">

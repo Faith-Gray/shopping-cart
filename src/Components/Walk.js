@@ -10,7 +10,6 @@ function Walk() {
 
   const [products, setProducts] = useState([]);
 
-
   const fetchProducts = () => {
 
     commerce.products.list({
@@ -27,7 +26,6 @@ function Walk() {
     fetchProducts();
   }, []);
 
-  if(!products) return <Loading/>;
 
     return (
       <div className="walk">
@@ -36,6 +34,7 @@ function Walk() {
         </header>
         <SortBar />
         <ProductList products={products} />
+        
 
 
       </div>

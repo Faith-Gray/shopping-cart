@@ -3,7 +3,7 @@ import ProductItem from './ProductItem';
 import Loading from '../Loading/Loading';
 
 const ProductList = ({ products }) => {
-    // if(products) return <Loading/>;
+    if(!products.length) return <Loading/>;
 
     return (
         <div className="products" id="products">

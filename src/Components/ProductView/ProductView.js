@@ -2,6 +2,7 @@ import { commerce } from "../../lib/commerce";
 import { useState, useEffect } from "react";
 import './ProductView.css';
 import PropTypes from 'prop-types';
+import Loading from "../Loading/Loading";
 
 // const createMarkup = (text) => {
 //   return { _html: text}
@@ -11,6 +12,7 @@ import PropTypes from 'prop-types';
 
 const ProductView = ({ onAddToCart }) => {
     const [product, setProduct] = useState({});
+    const [pageLoading, setPageLoading] = useState(true);
     
     const handleAddToCart = () => {
       onAddToCart(product.id, 1);
@@ -32,6 +34,8 @@ const ProductView = ({ onAddToCart }) => {
             assets,
             variant_groups,
         });
+        setPageLoading(false);
+
     };
 
     // const productImages = product.assets.filter((asset) => asset.is_image);
@@ -41,6 +45,7 @@ const ProductView = ({ onAddToCart }) => {
         fetchProduct(id[2]);
     }, []);
 
+    if (pageLoading) return <Loading />;
     return (
       <div className="Product View">
 

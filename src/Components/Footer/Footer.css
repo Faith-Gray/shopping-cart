@@ -144,4 +144,30 @@
         /* background-color: red; */
         flex-direction: column;
     }
+    
+    .newsletterSection {
+        width: 80vw;
+    }
+
+    .subscribe {
+        width: 80vw;
+    }
+
+    .customerSupportSection {
+        width: 80vw;
+    }
+
+    .moreInfoSection {
+        width: 80vw;
+    }
+
+    .join {
+        width: 80vw;
+        padding-right: 0px;
+
+    }
+
+    .joinPack {
+        width: 80vw;
+    }
 }

@@ -14,7 +14,7 @@
 .spinner {
     font-size: 50px;
 
-    animation: spin infinite 5s linear;
+    animation: spin infinite 3s linear;
 
     /*You can increase or decrease the timer (5s) to 
         increase or decrease the speed of the spinner*/

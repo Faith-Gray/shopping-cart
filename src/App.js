@@ -107,7 +107,10 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} cart={cart}/>
+      <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} 
+      // cart={cart} 
+      // cartItems={cart.total_items}
+      />
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
 

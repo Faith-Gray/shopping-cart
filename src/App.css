@@ -86,6 +86,42 @@ a:link {
     transform-origin: bottom left;
 }
 
+@media (max-width: 450px) {
+    .sideNavBarClosed {
+        width: 100vw;
+
+    }
+
+    /* .nav_logoContainer {
+      width: 60vw;
+    } */
+
+    .nav_logo {
+        margin-right: 0px;
+        margin-left: auto;
+    }
+
+    .nav-dropdown-btn {
+        margin-right: 0;
+        padding-right: 0px;
+	}
+
+    .navBar {
+        width: 100vw;
+    }
+    
+    .nav_search {
+        margin-left: auto;
+        padding-left: 1em;
+        margin-right: .2em;
+
+    }
+    
+    body {
+        width: 100vw;
+    }
+}
+
 .nav_logoContainer {
     display: flex;
     flex-direction: row;

@@ -316,131 +316,10 @@ a:link {
 
 /* home */
 
-@media only screen and (max-width: 1024px) {
-/* mobile */
-    .greenDog {
-        /* width: auto;
-        height: auto; */
-        /* margin-left: auto; */
-        /* margin-right: 50px; */
-        /* margin: auto; */
-        display: block;
-
-        min-width: 300px;
-        
-    }
-
-
-
-}
-
-@media only screen and (max-width: 390px) {
-    .greenDog {
-        /* width: 300px; */
-        height: 560px;
-        /* margin-left: auto; */
-        /* margin-right: 50px; */
-        /* margin: auto; */
-        /* display: block; */
-
-        width: auto;
-    }
-}
-
-.greenOutline {
-    /* background-color: #00be75eb; */
-    background: radial-gradient(circle, #edae3048 1%, #00be75eb, #12904f);
-    display: grid;
-    place-items: center;
-}
-
-.greenDog {
-    width: auto;
-    height: 600px;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* margin: auto; */
-    /* display: block;
-    display: grid;
-    place-items: center; */
-    min-width: 345px;
-
-}
-
-.homeHeader {
-    display: flex;
-    justify-content: center;
-    padding-top: 70px;
-    padding-bottom: 30px;
-    font-size: 35px;
-}
-
-.seeMoreBtn {
-    background-color: var(--fontColor);
-    padding: 1em 2em 1em 2em;
-    border: none;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    display: block;
-    color: var(--backgroundColor) ;
-    font-weight: 500;
-    cursor: pointer;
-}
 
 /* sortbar */
 
-.sortBar {
-    display: flex;
-    flex-direction: row;
-    font-size: 18px;
-    /* border-color: rgba(5, 56, 107, 80%); */
-    /* border-top: 1px solid rgba(5, 56, 107, 25%); */
-    border-bottom: 1px solid rgba(5, 56, 107, 25%);
-    
-}
 
-.gridContainers {
-    display: flex;
-    flex-direction: row;
-    border-right: 1px solid rgba(5, 56, 107, 25%);
-    align-items: center;
-}
-
-.smallGrid {
-    padding-left: 1em;
-    background: none;
-	color: inherit;
-	border: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.bigGrid {
-    padding-left: 1em;
-    padding-right: 1.2em;
-    background: none;
-	color: inherit;
-	border: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-/* .fi-sr-grid {
-    color: rgba(5, 56, 107, 50%);
-} */
-
-.sort, .filter {
-    padding-top: 1.3em;
-    padding-bottom: 1.3em;
-    padding-left: 3.5em;
-    padding-right: 3.5em;
-    border-left: 1px solid rgba(5, 56, 107, 25%);
-}
-
-.sort {
-    margin-left: auto;
-}
 
 
 /* page title */
@@ -507,17 +386,4 @@ a:link {
 
 /* need to fix image spacing */
 
-/* Home screen */
 
-@media only screen and (max-width: 390px) {
-    .greenDog {
-        /* width: 300px; */
-        height: 560px;
-        /* margin-left: auto; */
-        /* margin-right: 50px; */
-        /* margin: auto; */
-        /* display: block; */
-
-        width: auto;
-    }
-}

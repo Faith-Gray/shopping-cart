@@ -1,0 +1,73 @@
+
+.greenOutline {
+    /* background-color: #00be75eb; */
+    background: radial-gradient(circle, #edae3048 1%, #00be75eb, #12904f);
+    display: grid;
+    place-items: center;
+}
+
+.greenDog {
+    width: auto;
+    height: 600px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin: auto; */
+    /* display: block;
+    display: grid;
+    place-items: center; */
+    min-width: 345px;
+
+}
+
+.homeHeader {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 35px;
+}
+
+.seeMoreBtn {
+    background-color: var(--fontColor);
+    padding: 1em 2em 1em 2em;
+    border: none;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: block;
+    color: var(--backgroundColor) ;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    /* mobile */
+    .greenDog {
+        /* width: auto;
+        height: auto; */
+        /* margin-left: auto; */
+        /* margin-right: 50px; */
+        /* margin: auto; */
+        display: block;
+
+        min-width: 300px;
+        
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .greenDog {
+        /* width: 300px; */
+        height: 560px;
+        /* margin-left: auto; */
+        /* margin-right: 50px; */
+        /* margin: auto; */
+        /* display: block; */
+
+        width: auto;
+    }
+}
+

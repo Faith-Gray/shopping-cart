@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Components/Home';
+import Home from './Components/Home/Home';
 import Shop from './Components/Shop';
 import Wear from './Components/Wear';
 import Walk from './Components/Walk';

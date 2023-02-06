@@ -1,9 +1,11 @@
 // import dog from './greenDog.jpg';
-import dog from './GDnobg(2).png';
+import dog from '../GDnobg(2).png';
 import { Link } from 'react-router-dom';
-import { commerce } from "../lib/commerce";
-import ProductList from "./Products/ProductList";
+import { commerce } from "../../lib/commerce";
+import ProductList from "../Products/ProductList";
 import { useState, useEffect } from 'react';
+import './Home.css';
+
 
 function Home() {
   const [products, setProducts] = useState([]);

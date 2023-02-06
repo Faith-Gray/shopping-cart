@@ -280,12 +280,19 @@ a:link {
     z-index: 9000;
     position: fixed;
     inset: 0 30% 0 0;
-    width: 400px;
+    width: 360px;
     padding: 40px;
     overflow: scroll;
     z-index: 1000;
 }
 
+@media (max-width: 380px) {
+
+    .sideNavBar {
+        width: 100vw;
+    }
+
+}
 
 
 /* overlay */

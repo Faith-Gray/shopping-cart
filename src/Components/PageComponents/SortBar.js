@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './SortBar.css';
 
 
@@ -6,7 +6,16 @@ import './SortBar.css';
 function SortBar() {
     const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
 
-    
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            const ismobile = window.innerWidth < 1000;
+            if (ismobile !== isMobile) setIsMobile(ismobile);
+        }, false);
+    }, [isMobile]);
+
+
     return (
 
         <div className='sortBar'>
@@ -16,7 +25,7 @@ function SortBar() {
                         setIsSmallerGridSelected(true);
                         }}
                     >
-                    <i className="fi fi-sr-apps"
+                    <i className= {isMobile ? "fi fi-sr-dice-one" : "fi fi-sr-apps"}
                     style={{
                         color: isSmallerGridSelected ? 'rgba(5, 56, 107)' : 'rgba(5, 56, 107, 50%)',
                     }}
@@ -28,7 +37,7 @@ function SortBar() {
                         setIsSmallerGridSelected(false);
                         }}
                     >
-                    <i className="fi fi-sr-grid"
+                    <i className={isMobile ? "fi fi-sr-apps" : "fi fi-sr-grid"}
                         style={{
                         color: isSmallerGridSelected ? 'rgba(5, 56, 107, 50%)' : 'rgba(5, 56, 107)',
                     }}></i>

@@ -343,6 +343,13 @@ a:link {
     max-width: 430px;
 }
 
+.product__card__mobile {
+    height: auto;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+
 .product__info {
     display: grid;
     justify-content: center;

@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import './ProductView.css';
 import PropTypes from 'prop-types';
 import Loading from "../Loading/Loading";
+import { stripHtml } from "string-strip-html";
 
 // const createMarkup = (text) => {
 //   return { _html: text}
 // };
-
 
 
 const ProductView = ({ onAddToCart }) => {
@@ -24,11 +24,15 @@ const ProductView = ({ onAddToCart }) => {
         const response = await commerce.products.retrieve(id);
         console.log(response);
         const { name, price, image, quantity, description, assets, variant_groups } = response;
+
+        const { result } = stripHtml(product.description);
+
+
         setProduct({
             id,
             name,
             quantity, 
-            description: description,
+            description: result,
             src: image?.url,
             price: price.formatted_with_symbol,
             assets,

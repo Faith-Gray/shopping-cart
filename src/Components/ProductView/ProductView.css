@@ -48,9 +48,15 @@
         margin-left: auto;
         margin-right: auto;
     }
+    
     .productDescriptionContainer {
         margin-left: 20px;
  
+    }
+    
+    .productImage {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -63,7 +69,13 @@
     }
     
     .productImageContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .productImage {
         width: 70%;
+        max-width: 400px;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -71,6 +83,14 @@
     
     .productDescriptionContainer {
         margin-left: auto;
-        margin-right: auto;  
+        margin-right: auto; 
+        /* padding-right: 20px;  */
+        width: 90%;
     }
+
+    .addToCartBtn{
+        height: 52px;
+        margin-top: 20px;
+    }
+    
 }

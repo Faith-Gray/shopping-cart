@@ -5,7 +5,7 @@ import Shop from './Components/Shop';
 import Wear from './Components/Wear';
 import Walk from './Components/Walk';
 import Chains from './Components/Chains';
-import Reviews from './Components/Reviews';
+import Reviews from './Components/Reviews/Reviews';
 import NavBar from './Components/NavBar';
 import SideNavBar from './Components/SideNavBar';
 import { useState, useEffect } from 'react';
@@ -16,7 +16,7 @@ import ProductView from './Components/ProductView/ProductView';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
 import { faImages } from '@fortawesome/free-solid-svg-icons';
-import SortBar from './Components/PageComponents/SortBar';
+import SortBar from './Components/SortBar/SortBar';
 
 
 
@@ -96,7 +96,7 @@ function App() {
   };
 
  
-
+ 
 
   const [ isNavExpanded, setIsNavExpanded ] = useState(false);
   // const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);

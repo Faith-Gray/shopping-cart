@@ -1,4 +1,4 @@
-import SortBar from "./PageComponents/SortBar";
+import SortBar from "./SortBar/SortBar";
 import { commerce } from "../lib/commerce";
 import ProductList from "./Products/ProductList";
 import { useState, useEffect } from 'react';

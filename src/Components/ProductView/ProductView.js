@@ -25,7 +25,7 @@ const ProductView = ({ onAddToCart }) => {
         console.log(response);
         const { name, price, image, quantity, description, assets, variant_groups } = response;
 
-        const { result } = stripHtml(product.description);
+        const { result } = stripHtml(description);
 
 
         setProduct({
@@ -33,6 +33,7 @@ const ProductView = ({ onAddToCart }) => {
             name,
             quantity, 
             description: result,
+            // description: description,
             src: image?.url,
             price: price.formatted_with_symbol,
             assets,

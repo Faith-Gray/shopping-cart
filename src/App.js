@@ -105,6 +105,8 @@ function App() {
   //   closed: { opacity: 0, x: "-100%" },
   // }
 
+  
+
   return (
     <div className="App">
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} 

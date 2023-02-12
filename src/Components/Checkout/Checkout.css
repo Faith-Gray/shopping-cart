@@ -1,5 +1,26 @@
 .checkout {
-    margin-top: 100px;
+    margin-top: 120px;
     margin-left: 100px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
 
+.checkout__heading {
+    font-size: 22px;
+
+}
+
+.construction {
+    font-size: 26px;
+    font-weight: 500;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.construction-para {
+    margin-left: auto;
+    margin-right: auto;
 }

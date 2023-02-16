@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import Loading from "../Loading/Loading";
 import { stripHtml } from "string-strip-html";
 
-// const createMarkup = (text) => {
-//   return { _html: text}
-// };
 
 
 const ProductView = ({ onAddToCart }) => {
@@ -36,7 +33,7 @@ const ProductView = ({ onAddToCart }) => {
             // description: description,
             src: image?.url,
             price: price.formatted_with_symbol,
-            assets,
+            assets: assets,
             variant_groups,
         });
         setPageLoading(false);
@@ -58,7 +55,9 @@ const ProductView = ({ onAddToCart }) => {
         <div className="pageContainer">
           <div className="productImageContainer">
           <img className="product__image" src={product.src} alt={product.name}/>
-
+          </div>
+          <div className="productImageCarousel"> 
+          {product.assets.map((product) => <img src={product.url} alt ='wft'/> )}
           </div>
           <div className="productDescriptionContainer">
             <div className="name">{product.name}</div>

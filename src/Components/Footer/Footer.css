@@ -119,18 +119,31 @@
     font-size: 18px;
 }
 
-.socialMediaIcons > element {
+/* .socialMediaIcons > element {
     color: var(--backgroundColor);
 }
 
+.svg-inline--fa {
+    color: var(--backgroundColor);
+}
+
+.fbIcon {
+    color: var(--backgroundColor);
+}
+
+.fa-facebook-f {
+
+    color: var(--backgroundColor);
+} */
+
 .socialMediaIcons {
     width: 130px;
-    background-color: gray;
+    background-color: green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
-    color: white;
+    color: var(--backgroundColor);
 }
 
 .fbIcon {

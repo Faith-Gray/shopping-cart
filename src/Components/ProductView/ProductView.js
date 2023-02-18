@@ -55,9 +55,10 @@ const ProductView = ({ onAddToCart }) => {
         <div className="pageContainer">
           <div className="productImageContainer">
           <img className="product__image" src={product.src} alt={product.name}/>
-          </div>
-          <div className="productImageCarousel"> 
-          {product.assets.map((product) => <img src={product.url} alt ='wft'/> )}
+
+            <div className="productImageCarousel"> 
+              {product.assets.map((product) => <img src={product.url} alt ='wft' key={product.url}/> )}
+            </div>
           </div>
           <div className="productDescriptionContainer">
             <div className="name">{product.name}</div>

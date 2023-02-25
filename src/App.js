@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import {  BrowerRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home/Home';
 import Shop from './Components/Shop';
@@ -17,15 +17,13 @@ import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
 import { faImages } from '@fortawesome/free-solid-svg-icons';
 import SortBar from './Components/SortBar/SortBar';
+import Layout from './Layout';
 
 
 
 
 
 function App() {
-
-
-
   const [cart, setCart] = useState({});
   
   useEffect(() => {
@@ -120,10 +118,10 @@ function App() {
       
       <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/shop" element={<Shop />} />
+      {/* <Route path="/shop" element={<Shop />} />
       <Route path="/wear" element={<Wear />} />
       <Route path="/walk" element={<Walk />} />
-      <Route path="/chains" element={<Chains />} />
+      <Route path="/chains" element={<Chains />} /> */}
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/cart" element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} onUpdateCartQty={handleUpdateCartQty} />}   />
 
@@ -132,7 +130,17 @@ function App() {
       <Route path="/product-view/:id" element={<ProductView onAddToCart={handleAddToCart} />} />
       <Route path="/checkout" element={<Checkout />} />
 
+
+      <Route element={<Layout />}>
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/wear" element={<Wear />} />
+        <Route path="/walk" element={<Walk />} />
+        <Route path="/chains" element={<Chains />} />
+
+      </Route>
+
       </Routes>
+
 
 
 

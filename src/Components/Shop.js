@@ -39,10 +39,6 @@ function Shop() {
 
   return (
     <div className="shop">
-      <header className="pageTitle">
-        SHOP ALL
-      </header>
-      <SortBar />
       <ProductList products={products} />
 
     </div>

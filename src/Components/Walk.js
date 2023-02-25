@@ -29,10 +29,7 @@ function Walk() {
 
     return (
       <div className="walk">
-        <header className="pageTitle">
-          WALK
-        </header>
-        <SortBar />
+
         <ProductList products={products} />
         
 

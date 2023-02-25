@@ -25,10 +25,7 @@ function Wear() {
   }, []);
     return (
       <div className="wear">
-        <header className="pageTitle">
-          WEAR
-        </header>
-        <SortBar />
+
         <ProductList products={products} />
 
       </div>

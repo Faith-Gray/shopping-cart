@@ -50,8 +50,8 @@ const ProductView = ({ onAddToCart }) => {
     }, []);
 
     const handleClick = (event, key) => {
-      console.log(event.target);
-      console.log('key index: ', key)
+      // console.log(event.target);
+      // console.log('key index: ', key)
       setProductImageNumber(key);
     };
 

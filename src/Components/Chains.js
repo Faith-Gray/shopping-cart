@@ -26,10 +26,7 @@ function Chains() {
 
     return (
       <div className="chains">
-        <header className="pageTitle">
-          CHAINS & TAGS
-        </header>
-        <SortBar />
+
         <ProductList products={products} />
 
       </div>

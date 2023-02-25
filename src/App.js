@@ -25,6 +25,8 @@ import Layout from './Layout';
 
 function App() {
   const [cart, setCart] = useState({});
+  const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
+
   
   useEffect(() => {
     // fetchProducts();
@@ -131,7 +133,7 @@ function App() {
       <Route path="/checkout" element={<Checkout />} />
 
 
-      <Route element={<Layout />}>
+      <Route element={<Layout isSmallerGridSelected={isSmallerGridSelected} setIsSmallerGridSelected={setIsSmallerGridSelected}/> }>
         <Route path="/shop" element={<Shop />} />
         <Route path="/wear" element={<Wear />} />
         <Route path="/walk" element={<Walk />} />

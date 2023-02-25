@@ -3,8 +3,7 @@ import './SortBar.css';
 
 
 
-function SortBar() {
-    const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
+function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
 

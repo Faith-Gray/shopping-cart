@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 import Loading from '../Loading/Loading';
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, isSmallerGridSelected }) => {
     if(!products.length) return <Loading/>;
 
     return (
@@ -11,6 +11,7 @@ const ProductList = ({ products }) => {
                 <ProductItem
                     key={product.id}
                     product={product}
+                    isSmallerGridSelected={isSmallerGridSelected} 
                 />
             ))}
         </div>

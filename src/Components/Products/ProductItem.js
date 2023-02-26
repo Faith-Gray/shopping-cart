@@ -2,13 +2,13 @@ import { stripHtml } from "string-strip-html";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, isSmallerGridSelected }) => {
     const { result } = stripHtml(product.description);
 
     return (
         <Link to={`/product-view/${product.id}`}>
         <div className="product__card-Container">
-            <div className="product__card">
+            <div className={isSmallerGridSelected ? "product__card--smallergrid" : "product__card"}>
                 <img className="product__image" src={product.image?.url} alt={product.name} />
                 <div className="product__info">
                     <h4 className="product__name">{product.name}</h4>

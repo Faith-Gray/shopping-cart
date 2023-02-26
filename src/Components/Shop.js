@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 
 
-function Shop() {
+function Shop({isSmallerGridSelected}) {
   const [products, setProducts] = useState([]);
 
 
@@ -39,7 +39,7 @@ function Shop() {
 
   return (
     <div className="shop">
-      <ProductList products={products} />
+      <ProductList products={products} isSmallerGridSelected={isSmallerGridSelected}/>
 
     </div>
   );

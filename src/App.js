@@ -1,4 +1,4 @@
-import {  BrowerRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import {  BrowerRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home/Home';
 import Shop from './Components/Shop';
@@ -126,7 +126,7 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
 
         <Route element={<Layout isSmallerGridSelected={isSmallerGridSelected} setIsSmallerGridSelected={setIsSmallerGridSelected}/> }>
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop" element={<Shop isSmallerGridSelected={isSmallerGridSelected} />} />
           <Route path="/wear" element={<Wear />} />
           <Route path="/walk" element={<Walk />} />
           <Route path="/chains" element={<Chains />} />

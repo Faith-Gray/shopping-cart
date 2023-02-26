@@ -127,9 +127,9 @@ function App() {
 
         <Route element={<Layout isSmallerGridSelected={isSmallerGridSelected} setIsSmallerGridSelected={setIsSmallerGridSelected}/> }>
           <Route path="/shop" element={<Shop isSmallerGridSelected={isSmallerGridSelected} />} />
-          <Route path="/wear" element={<Wear />} />
-          <Route path="/walk" element={<Walk />} />
-          <Route path="/chains" element={<Chains />} />
+          <Route path="/wear" element={<Wear isSmallerGridSelected={isSmallerGridSelected}/>} />
+          <Route path="/walk" element={<Walk isSmallerGridSelected={isSmallerGridSelected}/>} />
+          <Route path="/chains" element={<Chains isSmallerGridSelected={isSmallerGridSelected}/>} />
         </Route>
       </Routes>
 

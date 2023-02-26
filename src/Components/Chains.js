@@ -4,7 +4,7 @@ import ProductList from "./Products/ProductList";
 import { useState, useEffect } from 'react';
 
 
-function Chains() {
+function Chains({isSmallerGridSelected}) {
   const [products, setProducts] = useState([]);
 
 
@@ -27,7 +27,7 @@ function Chains() {
     return (
       <div className="chains">
 
-        <ProductList products={products} />
+        <ProductList products={products} isSmallerGridSelected={isSmallerGridSelected}/>
 
       </div>
     );

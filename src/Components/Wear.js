@@ -4,7 +4,7 @@ import ProductList from "./Products/ProductList";
 import { useState, useEffect } from 'react';
 
 
-function Wear() {
+function Wear({isSmallerGridSelected}) {
   const [products, setProducts] = useState([]);
 
 
@@ -26,7 +26,7 @@ function Wear() {
     return (
       <div className="wear">
 
-        <ProductList products={products} />
+        <ProductList products={products} isSmallerGridSelected={isSmallerGridSelected}/>
 
       </div>
     );

@@ -6,7 +6,7 @@ import Loading from "./Loading/Loading";
 
 
 
-function Walk() {
+function Walk({isSmallerGridSelected}) {
 
   const [products, setProducts] = useState([]);
 
@@ -30,7 +30,7 @@ function Walk() {
     return (
       <div className="walk">
 
-        <ProductList products={products} />
+        <ProductList products={products} isSmallerGridSelected={isSmallerGridSelected}/>
         
 
 

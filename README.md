@@ -22,9 +22,8 @@ Live Demo - https://resonant-scone-a817f6.netlify.app/
 This project is still a work in progress. Below are the following tasks that will be added.
 
 - Complete the review page
-- Add the grid functionality to the sort bar
 - Add sort and filter functionality to the sort bar
-- Add additional product pictures to the product page.
+- Add additional product pictures to the product mobile page.
 
 ### Authors
 

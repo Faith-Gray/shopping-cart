@@ -436,4 +436,8 @@ a:link {
         margin-right: 20px;
     }
 
+    .product__name {
+        text-align: center;
+    }
+
 }

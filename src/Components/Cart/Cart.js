@@ -45,7 +45,12 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       </div>
   )
 
-  if(!cart?.line_items) return <Loading/>;
+  if(!cart?.line_items) return <div className='loadingDiv'>
+
+    <Loading/>;
+
+  </div>
+  
 
   
   return (

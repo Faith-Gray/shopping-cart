@@ -70,7 +70,12 @@ const ProductView = ({ onAddToCart }) => {
       setProductImageNumber(key);
     };
 
-    if (pageLoading) return <Loading />;
+
+    if (pageLoading) return <div className="loadingDiv">
+        <Loading />
+    </div>
+
+
     return (
       <div className="Product View">
 

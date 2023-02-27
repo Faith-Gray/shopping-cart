@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="join">
                 <div className="joinPack">JOIN OUR PACK</div>
                 <ul className="socialMediaIcons">
-                    <FontAwesomeIcon className='fbIcon' icon={faFacebookF}/>
+                    <FontAwesomeIcon className='fbIcon' icon={faFacebookF} color='red'/>
                     <li><FontAwesomeIcon className='twitterIcon' icon={ faTwitter } color="green"/></li>
                     <li><FontAwesomeIcon className='linkedinIcon' icon={ faLinkedin }/></li>
                     <li><FontAwesomeIcon className='githubIcon' icon={ faGithub }/></li>

@@ -2,11 +2,10 @@ import { commerce } from "../../lib/commerce";
 import { useState, useEffect } from "react";
 import './ProductView.css';
 import PropTypes from 'prop-types';
-import Loading from "../Loading/Loading";
+import Loading from "../../Components/Loading/Loading";
 import { stripHtml } from "string-strip-html";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle} from '@fortawesome/free-solid-svg-icons';
-
 //Hallow circle icon. Might use later
 // import { faCircle} from '@fortawesome/free-regular-svg-icons';
 
@@ -19,6 +18,35 @@ const ProductView = ({ onAddToCart }) => {
     const [pageLoading, setPageLoading] = useState(true);
     const [productImageNumber, setProductImageNumber] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+    const [touchPosition, setTouchPosition] = useState(null);
+    
+    const handleTouchStart = (e) => {
+      const touchDown = e.touches[0].clientX;
+      setTouchPosition(touchDown);
+    }
+
+    const handleTouchMove = (e) => {
+      const touchDown = touchPosition
+  
+      if(touchDown === null) {
+        return
+      }
+  
+      const currentTouch = e.touches[0].clientX
+      const diff = touchDown - currentTouch
+  
+      if (diff > 5) {
+        // next()
+        console.log('next s');
+      }
+  
+      if (diff < -5) {
+        // prev()
+        console.log('prev s');
+      }
+  
+      setTouchPosition(null)
+    }
 
     useEffect(() => {
         window.addEventListener("resize", () => {
@@ -82,7 +110,12 @@ const ProductView = ({ onAddToCart }) => {
 
         <div className="pageContainer">
           <div className="productImageContainer">
-          <img className="product__image" src={product.assets[productImageNumber].url} alt={product.name}/>
+          <img className="product__image" 
+            src={product.assets[productImageNumber].url}
+            alt={product.name}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+          />
 
             <div className="productImageCarousel"> 
               

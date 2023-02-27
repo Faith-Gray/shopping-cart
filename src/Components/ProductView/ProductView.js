@@ -4,6 +4,13 @@ import './ProductView.css';
 import PropTypes from 'prop-types';
 import Loading from "../Loading/Loading";
 import { stripHtml } from "string-strip-html";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle} from '@fortawesome/free-solid-svg-icons';
+
+//Hallow circle icon. Might use later
+// import { faCircle} from '@fortawesome/free-regular-svg-icons';
+
+
 
 
 
@@ -11,6 +18,14 @@ const ProductView = ({ onAddToCart }) => {
     const [product, setProduct] = useState({});
     const [pageLoading, setPageLoading] = useState(true);
     const [productImageNumber, setProductImageNumber] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            const ismobile = window.innerWidth < 900;
+            if (ismobile !== isMobile) setIsMobile(ismobile);
+        }, false);
+    }, [isMobile]);
     
     const handleAddToCart = () => {
       onAddToCart(product.id, 1);
@@ -65,7 +80,13 @@ const ProductView = ({ onAddToCart }) => {
           <img className="product__image" src={product.assets[productImageNumber].url} alt={product.name}/>
 
             <div className="productImageCarousel"> 
-              {product.assets.map((product, key) => <img src={product.url} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> )}
+              
+              {isMobile ? (product.assets.map((product, key) => 
+              <FontAwesomeIcon className="circles" icon={faCircle} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> )) 
+              : 
+              (product.assets.map((product, key) => <img src={product.url} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> ))
+              }
+
             </div>
           </div>
           <div className="productDescriptionContainer">

@@ -118,7 +118,16 @@
     }
 
     .productImageCarousel {
-        display: none;
+        display: flex;
+        justify-content: center;
+        column-gap: 5px;
+        padding-top: 3px;
+        font-size: 8px;
+        
+    }
+
+    .circles {
+        color: rgba(5, 56, 107, 50%);
     }
     
 }

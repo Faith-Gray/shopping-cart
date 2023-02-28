@@ -36,12 +36,12 @@ const ProductView = ({ onAddToCart }) => {
       const diff = touchDown - currentTouch
   
       if (diff > 5) {
-        // next()
+        next();
         console.log('next s');
       }
   
       if (diff < -5) {
-        // prev()
+        prev();
         console.log('prev s');
       }
   
@@ -96,8 +96,20 @@ const ProductView = ({ onAddToCart }) => {
       // console.log(event.target);
       // console.log('key index: ', key)
       setProductImageNumber(key);
+      console.log(key)
     };
 
+    const next = () => {
+      if (productImageNumber < (product.assets.length - 1)) {
+        setProductImageNumber(prevNum => prevNum + 1)
+      }
+    }
+    
+    const prev = () => {
+      if (productImageNumber > 0) {
+        setProductImageNumber(prevNum => prevNum - 1)
+      }
+    }
 
     if (pageLoading) return <div className="loadingDiv">
         <Loading />

@@ -6,6 +6,8 @@ import Loading from "../../Components/Loading/Loading";
 import { stripHtml } from "string-strip-html";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle} from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch} from '@fortawesome/free-solid-svg-icons';
+
 //Hallow circle icon. Might use later
 // import { faCircle} from '@fortawesome/free-regular-svg-icons';
 
@@ -37,12 +39,10 @@ const ProductView = ({ onAddToCart }) => {
   
       if (diff > 5) {
         next();
-        console.log('next s');
       }
   
       if (diff < -5) {
         prev();
-        console.log('prev s');
       }
   
       setTouchPosition(null)
@@ -85,7 +85,6 @@ const ProductView = ({ onAddToCart }) => {
 
     };
 
-    // const productImages = product.assets.filter((asset) => asset.is_image);
 
     useEffect(() => {
         const id = window.location.pathname.split("/");
@@ -131,8 +130,13 @@ const ProductView = ({ onAddToCart }) => {
 
             <div className="productImageCarousel"> 
               
+              {/* for (let i = 0; i < cars.length; i++) {
+                    text += cars[i] + "<br>";
+                  }  */}
+
+
               {isMobile ? (product.assets.map((product, key) => 
-              <FontAwesomeIcon className="circles" icon={faCircle} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> )) 
+              <FontAwesomeIcon className="circles" icon={faCircleNotch} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> )) 
               : 
               (product.assets.map((product, key) => <img src={product.url} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> ))
               }

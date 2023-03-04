@@ -7,7 +7,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
-    const [sortLowtoHigh, setSortLowtoHigh] = useState(0);
+    const [sortLowtoHigh, setSortLowtoHigh] = useState(true);
 
     useEffect(() => {
         window.addEventListener("resize", () => {
@@ -17,10 +17,13 @@ function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
     }, [isMobile]);
 
     function changeArrow() {
-        if (sortLowtoHigh == true) {setSortLowtoHigh(false)} else {
-            setSortLowtoHigh(true);
-            console.log(sortLowtoHigh);
-        }
+        // if (sortLowtoHigh === true) {setSortLowtoHigh(false)} else {
+        //     setSortLowtoHigh(true);
+        //     console.log(sortLowtoHigh);
+        // }
+        setSortLowtoHigh(!sortLowtoHigh);
+        console.log(sortLowtoHigh);
+
     }
     
 

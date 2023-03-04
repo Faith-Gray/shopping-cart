@@ -21,7 +21,12 @@ const ProductView = ({ onAddToCart }) => {
     const [productImageNumber, setProductImageNumber] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
     const [touchPosition, setTouchPosition] = useState(null);
-    
+
+    useEffect(() => {
+      const id = window.location.pathname.split("/");
+      fetchProduct(id[2]);
+    }, []);
+
     const handleTouchStart = (e) => {
       const touchDown = e.touches[0].clientX;
       setTouchPosition(touchDown);
@@ -86,10 +91,7 @@ const ProductView = ({ onAddToCart }) => {
     };
 
 
-    useEffect(() => {
-        const id = window.location.pathname.split("/");
-        fetchProduct(id[2]);
-    }, []);
+
 
     const handleClick = (event, key) => {
       // console.log(event.target);
@@ -130,16 +132,45 @@ const ProductView = ({ onAddToCart }) => {
 
             <div className="productImageCarousel"> 
               
-              {/* for (let i = 0; i < cars.length; i++) {
-                    text += cars[i] + "<br>";
-                  }  */}
-
-
-              {isMobile ? (product.assets.map((product, key) => 
-              <FontAwesomeIcon className="circles" icon={faCircleNotch} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> )) 
-              : 
-              (product.assets.map((product, key) => <img src={product.url} alt ='product images' key={product.url} onClick={event => handleClick(event, key)}/> ))
-              }
+              {product.assets.map((asset, i) => {
+                  const isCurrentAsset = i === productImageNumber;
+                  const assetElements = [];
+                  
+                  if (isMobile) {
+                    if (isCurrentAsset) {
+                      assetElements.push(
+                        <FontAwesomeIcon 
+                          className="circles current" 
+                          icon={faCircle} 
+                          alt='product images' 
+                          key={asset.url} 
+                          onClick={event => handleClick(event, i)}
+                        />
+                      );
+                    } else {
+                      assetElements.push(
+                        <FontAwesomeIcon 
+                          className="circles" 
+                          icon={faCircleNotch} 
+                          alt='product images' 
+                          key={asset.url} 
+                          onClick={event => handleClick(event, i)}
+                        />
+                      );
+                    }
+                  } else {
+                    assetElements.push(
+                      <img 
+                        src={asset.url} 
+                        alt='product images' 
+                        key={asset.url} 
+                        onClick={event => handleClick(event, i)}
+                      />
+                    );
+                  }
+                  
+                  return assetElements;
+            })}
 
             </div>
           </div>

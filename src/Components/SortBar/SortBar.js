@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import './SortBar.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
 function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
+    const [sortLowtoHigh, setSortLowtoHigh] = useState(0);
 
     useEffect(() => {
         window.addEventListener("resize", () => {
@@ -13,6 +15,14 @@ function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
             if (ismobile !== isMobile) setIsMobile(ismobile);
         }, false);
     }, [isMobile]);
+
+    function changeArrow() {
+        if (sortLowtoHigh == true) {setSortLowtoHigh(false)} else {
+            setSortLowtoHigh(true);
+            console.log(sortLowtoHigh);
+        }
+    }
+    
 
 
     return (
@@ -43,10 +53,23 @@ function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
                 </button>
             </div>    
             <div className='sort'>
-                Sort
+                <button className='sortBtn'
+                onClick={changeArrow}
+                
+                >Sort
+                <FontAwesomeIcon className='sortArrow' icon={faChevronUp} />
+                
+                </button>
+                
+
             </div>
+            {/* <div className='sortBox'>
+                <button className='sortBox-low-high'>Low to High</button>
+                <button className='sortBox-high-low'>High to Low</button>
+
+            </div> */}
             <div className='filter'>
-                Filter
+                <button className='filterBtn'>Filter</button>
             </div>
         </div>
     );

@@ -74,3 +74,28 @@
     padding-bottom: 1.9em;
     margin-top: 85px;
 }
+
+.sortBtn {
+    all: unset;
+    cursor: pointer;
+}
+
+.filterBtn {
+    all: unset;
+    cursor: pointer;
+}
+
+.sortBox {
+    width: 150px;
+    height: 75px;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    margin: 40px;
+    float: left;
+}
+
+.sortArrow {
+    padding-left: 2px;
+}

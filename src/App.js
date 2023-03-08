@@ -18,7 +18,7 @@ import Checkout from './Components/Checkout/Checkout';
 import { faImages } from '@fortawesome/free-solid-svg-icons';
 import SortBar from './Components/SortBar/SortBar';
 import Layout from './Layout';
-
+import SortModal from './Components/SortBar/SortModal';
 
 
 
@@ -26,6 +26,8 @@ import Layout from './Layout';
 function App() {
   const [cart, setCart] = useState({});
   const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   
   useEffect(() => {
@@ -114,6 +116,8 @@ function App() {
       // cartItems={cart.total_items}
       />
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
+      {/* <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
+
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
 
 
@@ -133,8 +137,7 @@ function App() {
         </Route>
       </Routes>
 
-
-
+      {/* <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
 
 
 

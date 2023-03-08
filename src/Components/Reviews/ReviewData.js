@@ -56,24 +56,5 @@ export default[
         sentence: "I don't usally need a hoodie for the weather but these are too cute to pass up.",
         image: "./images/review11.jpg",
     },
-    // {
-    //     name: "Jean Grey",
-    //     sentence: "I somehow knew this would be the perfect gift for my dog and bf."
-    // },
-    // {
-    //     name: "Johnny Storm",
-    //     sentence: "These are HOT. No pun necessary."
-    // },
-    // {
-    //     name: "Sue Storm",
-    //     sentence: "Quick and easy to put on."
-    // },
-    // {
-    //     name: "Scott Summers",
-    //     sentence: "I haven't seen much of my family lately so I decided to splurge a bit on my dog. No regrets."
-    // },
-    // {
-    //     name: "Anna Marie",
-    //     sentence: "Now, I just need to find matching gloves."
-    // },
+
 ]

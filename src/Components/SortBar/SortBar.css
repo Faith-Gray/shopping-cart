@@ -75,12 +75,7 @@
     margin-top: 85px;
 }
 
-.sortBtn {
-    all: unset;
-    cursor: pointer;
-}
-
-.filterBtn {
+.filterBtn, .sortBtn, .sortModal-close, .sortModal-low-high, .sortModal-high-low {
     all: unset;
     cursor: pointer;
 }
@@ -99,3 +94,32 @@
 .sortArrow {
     padding-left: 2px;
 }
+
+.sortModal > button {
+    all: unset;
+    cursor: pointer;
+}
+
+.sortModal {
+    height: 100vh;
+    border-left: 1px solid rgba(5, 56, 107, 25%);
+    z-index: 1000;
+    background-color: red;
+    width: 400px;
+}
+
+/* .sideNavBar {
+    border-right: 1px solid rgba(5, 56, 107, 25%);
+    display: block;
+    flex-direction: column;
+    background-color: #edf5e1;
+    z-index: 9000;
+    position: fixed;
+    inset: 0 30% 0 0;
+    width: 400px;
+    padding: 40px;
+    overflow: scroll;
+    z-index: 1000;
+    transition: transform .3s
+        cubic-bezier(0, .52, 0, 1);
+    /* transform: translate3d(0vw, 0, 0); */

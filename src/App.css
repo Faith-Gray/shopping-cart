@@ -54,7 +54,7 @@ a:link {
     align-items: center;
 	padding: 0 2rem;
     color: var(--fontColor);
-    z-index: 100;
+    z-index: 10;
     position: fixed;
     width: 100%;
     top: 0;
@@ -213,13 +213,12 @@ a:link {
         display: block;
         flex-direction: column;
         background-color: #edf5e1;
-        z-index: 9000;
+        z-index: 100;
         position: fixed;
         inset: 0 30% 0 0;
         width: 400px;
         padding: 40px;
         overflow: scroll;
-        z-index: 1000;
         transition: transform .3s
             cubic-bezier(0, .52, 0, 1);
         /* transform: translate3d(0vw, 0, 0); */
@@ -277,13 +276,11 @@ a:link {
     display: block;
     flex-direction: column;
     background-color: #edf5e1;
-    z-index: 9000;
     position: fixed;
     inset: 0 30% 0 0;
     width: 360px;
     padding: 40px;
     overflow: scroll;
-    z-index: 1000;
 }
 
 @media (max-width: 380px) {

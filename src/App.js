@@ -19,8 +19,6 @@ import Layout from './Layout';
 import SortModal from './Components/SortBar/SortModal';
 
 
-
-
 function App() {
   const [cart, setCart] = useState({});
   const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
@@ -80,7 +78,7 @@ function App() {
 
       />
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
-      {/* <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
+      <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
       <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
 

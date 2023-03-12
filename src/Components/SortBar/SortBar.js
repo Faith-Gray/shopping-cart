@@ -3,7 +3,7 @@ import './SortBar.css';
 
 
 
-function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
+function SortBar({isSmallerGridSelected, setIsSmallerGridSelected, isModalOpen, setIsModalOpen}) {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
     
@@ -47,7 +47,8 @@ function SortBar({isSmallerGridSelected, setIsSmallerGridSelected}) {
                 </button>
             </div>    
             <div className='sort'>
-                <button className='sortBtn'>Sort</button>
+                <button className='sortBtn' onClick={() => {setIsModalOpen(true);
+                }}>Sort</button>
                 
 
             </div>

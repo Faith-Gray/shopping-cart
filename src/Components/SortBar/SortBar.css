@@ -101,11 +101,43 @@
 }
 
 .sortModal {
-    height: 100vh;
+    /* height: 100vh;
     border-left: 1px solid rgba(5, 56, 107, 25%);
+    display: block;
+
     z-index: 1000;
     background-color: red;
     width: 400px;
+    float: right; */
+    /* inset: 0 0% 70% 0; */
+
+    border-left: 1px solid rgba(5, 56, 107, 25%);
+    display: block;
+    flex-direction: column;
+    background-color: #edf5e1;
+    position: fixed;
+    inset: 0 0 0 calc(100% - 350px);
+    height: 100%;
+    padding: 40px;
+    overflow: scroll;
+    z-index: 1000;
+    transition: transform .3s
+        cubic-bezier(0, .52, 0, 1);
+
+}
+
+.sortModalClosed {
+    transition: transform .3s
+    cubic-bezier(0, .52, 0, 1);
+    transform: translateX(100%);
+    border-left: 1px solid rgba(5, 56, 107, 25%);
+    display: block;
+    flex-direction: column;
+    background-color: #edf5e1;
+    position: fixed;
+    inset: 0 0 0 calc(100% - 350px);
+    padding: 40px;
+    overflow: scroll;
 }
 
 /* .sideNavBar {

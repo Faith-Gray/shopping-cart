@@ -1,4 +1,4 @@
-import {  BrowerRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home/Home';
 import Shop from './Components/Shop';
@@ -15,8 +15,6 @@ import Footer from './Components/Footer/Footer';
 import ProductView from './Pages/ProductView/ProductView';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
-import { faImages } from '@fortawesome/free-solid-svg-icons';
-import SortBar from './Components/SortBar/SortBar';
 import Layout from './Layout';
 import SortModal from './Components/SortBar/SortModal';
 
@@ -31,9 +29,7 @@ function App() {
 
   
   useEffect(() => {
-    // fetchProducts();
     fetchCart();
-    
   }, [cart]);
 
   const fetchCart = () => {
@@ -43,20 +39,6 @@ function App() {
       console.log('There was an error fetching the cart', error);
     });
   }
-
-  // const fetchCart = async () => {
-    
-  //   const response = await commerce.cart.retrieve();
-  //   setCart(response);
-  // };
-
-  // const refreshCart = async () => {
-  //   const newCart = await commerce.cart.refresh();
-  //   setCart(newCart);
-  // };
-
-
-
 
 
   const handleAddToCart = (productId, quantity) => {
@@ -84,36 +66,18 @@ function App() {
     });
   };
 
-  // const handleEmptyCart = () => {
-  //   commerce.cart.empty().then((resp) => {
-  //     setCart(resp.cart);
-  //   }).catch((error) => {
-  //     console.error('There was an error emptying the cart', error);
-  //   });
-  // }
-
   const handleEmptyCart = async () => {
     const response = await commerce.cart.empty();
     setCart(response.cart);
   };
 
- 
- 
-
   const [ isNavExpanded, setIsNavExpanded ] = useState(false);
-  // const [ isSmallerGridSelected, setIsSmallerGridSelected ] = useState(false);
-  // const variants = {
-  //   open: { opacity: 1, x: 0 },
-  //   closed: { opacity: 0, x: "-100%" },
-  // }
 
-  
 
   return (
     <div className="App">
       <NavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} 
-      // cart={cart} 
-      // cartItems={cart.total_items}
+
       />
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       {/* <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
@@ -149,15 +113,3 @@ function App() {
 }
 
 export default App;
-
-
-// to do
-// Refactor nav bar to be its own component and to map out each link to make code more dry. I want one place for the links to be updated/added.
-// I need to use square api for the cart and check out 
-// Have transitions to have every product load in one by one
-// Update the grid buttons to change the size of the product images 
-// Add banners around the main dog for a sale or something
-// Add content to the reviews page 
-// Update the loading screen to show something plus add to all of the pges when the products are loading
-// figure out the check out
-// Add functionality to the sort, filter, and search

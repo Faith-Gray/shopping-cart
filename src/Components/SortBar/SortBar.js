@@ -47,7 +47,8 @@ function SortBar({isSmallerGridSelected, setIsSmallerGridSelected, isModalOpen, 
                 </button>
             </div>    
             <div className='sort'>
-                <button className='sortBtn' onClick={() => {setIsModalOpen(true);
+                <button className='sortBtn' 
+                    onClick={() => {setIsModalOpen(!isModalOpen);
                 }}>Sort</button>
                 
 

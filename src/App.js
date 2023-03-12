@@ -80,7 +80,7 @@ function App() {
       <SideNavBar setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded}/>
       <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
-      <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} />
+      <Overlay setIsNavExpanded={setIsNavExpanded} isNavExpanded={isNavExpanded} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
 
       
@@ -91,7 +91,7 @@ function App() {
         <Route path="/product-view/:id" element={<ProductView onAddToCart={handleAddToCart} />} />
         <Route path="/checkout" element={<Checkout />} />
 
-        <Route element={<Layout isSmallerGridSelected={isSmallerGridSelected} setIsSmallerGridSelected={setIsSmallerGridSelected}/> }>
+        <Route element={<Layout isSmallerGridSelected={isSmallerGridSelected} setIsSmallerGridSelected={setIsSmallerGridSelected} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/> }>
           <Route path="/shop" element={<Shop isSmallerGridSelected={isSmallerGridSelected} />} />
           <Route path="/wear" element={<Wear isSmallerGridSelected={isSmallerGridSelected}/>} />
           <Route path="/walk" element={<Walk isSmallerGridSelected={isSmallerGridSelected}/>} />
@@ -99,7 +99,6 @@ function App() {
         </Route>
       </Routes>
 
-      {/* <SortModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
 
 
 
